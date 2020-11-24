@@ -29,27 +29,22 @@ export default function HomeAboutSection() {
           About Me
         </Typography>
       </Box>
-      <Box width="300px" margin="auto">
-        <Carousel
-          showThumbs={false}
-          transitionTime={800}
-          infiniteLoop={true}
-          autoPlay={true}
-        >
-          <div>
-            <img src=".\images\thumbnails\TicTacToe-example-thumbnail.png" />
-            <p className="legend">Tic-Tac-Toe</p>
-          </div>
-          <div>
-            <img src=".\images\thumbnails\LanguageApp-thumbnail.png" />
-            <p className="legend">Language Learning App</p>
-          </div>
-          <div>
-            <img src=".\images\thumbnails\Accounting-Website-example-thumbnail.png" />
-            <p className="legend">Accounting Website</p>
-          </div>
-        </Carousel>
-        <Button style={{ marginTop: "30px" }}>See More</Button>
+      <Box margin="0 3rem">
+        <Typography variant="p">
+          As a passionate developer, my goals are to keep progressing in all
+          areas of web development.
+        </Typography>
+        <br />
+        <br />
+        <Typography variant="p">
+          I'm also a huge nerd when it comes to foreign languages and I've been
+          weirdly obsessive about building things and thinking about what to
+          build next.
+        </Typography>
+
+        <br />
+
+        <Button style={{ marginTop: "30px" }}>Read More</Button>
       </Box>
     </StyledSection>
   );
