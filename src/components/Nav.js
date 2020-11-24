@@ -245,7 +245,7 @@ export default function PersistentDrawerLeft(props) {
       >
         <div className={classes.drawerHeader} />
       </main>
-      <ScrollTop {...props}>
+      <ScrollTop style={{ zIndex: 5 }} {...props}>
         <Fab color="secondary" size="small" aria-label="scroll back to top">
           <KeyboardArrowUpIcon />
         </Fab>

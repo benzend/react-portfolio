@@ -5,33 +5,40 @@ import {
   FormHelperText,
   Input,
   InputLabel,
+  TextareaAutosize,
   Typography,
 } from "@material-ui/core";
 
 import styled from "styled-components";
 
 const StyledSection = styled.div`
-  clip-path: polygon(89% 15%, 100% 0, 100% 100%, 0 100%, 0 15%);
-  padding: 120px 0 70px 0;
-  background: rgb(140, 192, 255);
+  background: rgb(112, 168, 255);
   background: linear-gradient(
-    63deg,
-    rgba(140, 192, 255, 1) 0%,
-    rgba(190, 234, 255, 1) 100%
+    34deg,
+    rgba(112, 168, 255, 1) 0%,
+    rgba(129, 199, 255, 1) 100%
   );
-
-    text-align: center;
+  padding: 6%;
+  margin: 8% 0;
+  textArea {
+    margin-top: 6%;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    border: none;
+    border-radius: 5px;
+    padding: 4px;
   }
-
 `;
 
 export default function HomeContactSection() {
   return (
     <StyledSection>
-      <Typography variant="h5" component="h3">
-        Contact Me
-      </Typography>
-      <Box>
+      <Box textAlign="center">
+        <Typography variant="h5" component="h3">
+          Contact Me
+        </Typography>
+      </Box>
+      <Box textAlign="center">
         <form>
           <FormControl>
             <InputLabel htmlFor="name">Name</InputLabel>
@@ -61,12 +68,22 @@ export default function HomeContactSection() {
               aria-describedby="An input for your phone number"
             />
             <FormHelperText id="my-helper-text">
-              Your phone number isn't required
+              (Your phone number isn't required)
             </FormHelperText>
           </FormControl>
           <br />
+          <FormControl>
+            <TextareaAutosize
+              placeholder="What would you like to say?"
+              id="text-area"
+              rows="5"
+              cols="28"
+            ></TextareaAutosize>
+          </FormControl>
           <Box marginTop="20px">
-            <Button type="submit">Submit</Button>
+            <Button color="secondary" type="submit">
+              Submit
+            </Button>
           </Box>
         </form>
       </Box>
