@@ -6,7 +6,7 @@ import styled from "styled-components";
 
 const StyledSection = styled.div`
   position: relative;
-  top: -85px;
+  top: -160px;
   clip-path: polygon(89% 15%, 100% 0, 100% 100%, 0 100%, 0 15%);
   padding: 120px 0 70px 0;
   background: rgb(140, 192, 255);
@@ -21,12 +21,12 @@ const StyledSection = styled.div`
 
 `;
 
-export default function HomeContactSection() {
+export default function HomeAboutSection() {
   return (
     <StyledSection>
       <Box padding="10px 0 30px">
         <Typography variant="h5" component="h3">
-          Projects
+          About Me
         </Typography>
       </Box>
       <Box width="300px" margin="auto">
