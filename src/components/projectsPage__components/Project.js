@@ -64,7 +64,7 @@ export default function RecipeReviewCard(props) {
         <IconButton href={props.ghHref}>
           <GitHubIcon />
         </IconButton>
-        <IconButton>
+        <IconButton href={props.liveHref}>
           <LanguageIcon />
         </IconButton>
         <IconButton
