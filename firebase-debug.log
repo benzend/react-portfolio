@@ -1,0 +1,11 @@
+[debug] [2020-11-24T18:56:52.075Z] ----------------------------------------------------------------------
+[debug] [2020-11-24T18:56:52.077Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\12086\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2020-11-24T18:56:52.078Z] CLI Version:   8.16.2
+[debug] [2020-11-24T18:56:52.078Z] Platform:      win32
+[debug] [2020-11-24T18:56:52.078Z] Node Version:  v12.18.4
+[debug] [2020-11-24T18:56:52.079Z] Time:          Tue Nov 24 2020 11:56:52 GMT-0700 (Mountain Standard Time)
+[debug] [2020-11-24T18:56:52.079Z] ----------------------------------------------------------------------
+[debug] [2020-11-24T18:56:52.079Z] 
+[debug] [2020-11-24T18:56:52.080Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2020-11-24T18:56:52.102Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-11-24T18:56:52.558Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200

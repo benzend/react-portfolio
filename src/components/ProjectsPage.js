@@ -1,13 +1,15 @@
-import Nav from "./Nav";
+import { Nav } from "./index";
 import Projects from "./projectsPage__components/Projects";
 import Typography from "@material-ui/core/Typography";
 
-export default function ProjectsPage() {
+export const ProjectsPage = () => {
   return (
     <div>
       <Nav />
-      <Typography variant="h3">Projects</Typography>
+      <Typography variant="h4" componet="h2">
+        Projects
+      </Typography>
       <Projects />
     </div>
   );
-}
+};

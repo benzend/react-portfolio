@@ -21,12 +21,10 @@ const StyledFooter = styled.footer`
   }
 `;
 
-function Footer() {
+export const Footer = () => {
   return (
     <StyledFooter className="footer">
       <a href="http://madeunlinked.com">@madeunlinked</a>
     </StyledFooter>
   );
-}
-
-export default Footer;
+};

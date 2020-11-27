@@ -3,6 +3,8 @@ import { Box, Button, Typography } from "@material-ui/core";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import styled from "styled-components";
 
+import { Link } from "react-router-dom";
+
 const StyledSection = styled.div`
   background: rgb(112, 168, 255);
   background: linear-gradient(
@@ -30,9 +32,11 @@ export default function HomeAboutSection() {
         </Typography>
         <br />
 
-        <Button color="secondary" style={{ marginTop: "30px" }}>
-          Read More
-        </Button>
+        <Link to="about">
+          <Button color="secondary" style={{ marginTop: "30px" }}>
+            Read More
+          </Button>
+        </Link>
       </Box>
     </StyledSection>
   );

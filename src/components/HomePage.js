@@ -1,9 +1,9 @@
-import Nav from "./Nav";
 import HomeHeader from "./homePage__components/HomeHeader";
 import HomeMain from "./homePage__components/HomeMain";
-import Footer from "./Footer";
+import { Nav } from "./index";
+import { Footer } from "./index";
 
-export default function HomePage() {
+export const HomePage = () => {
   return (
     <div>
       <Nav />
@@ -12,4 +12,4 @@ export default function HomePage() {
       <Footer />
     </div>
   );
-}
+};

@@ -1,11 +1,13 @@
 import React from "react";
 import "./App.css";
 import "fontsource-roboto";
-import HomePage from "./components/HomePage";
-import ProjectsPage from "./components/ProjectsPage";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import AboutPage from "./components/AboutPage";
-import ContactPage from "./components/ContactPage";
+import {
+  AboutPage,
+  ProjectsPage,
+  ContactPage,
+  HomePage,
+} from "./components/index";
 
 function App() {
   return (

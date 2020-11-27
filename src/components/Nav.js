@@ -130,7 +130,7 @@ function ScrollTop(props) {
   );
 }
 
-export default function PersistentDrawerLeft(props) {
+export const Nav = (props) => {
   const classes = useStyles();
 
   const theme = useTheme();
@@ -252,4 +252,4 @@ export default function PersistentDrawerLeft(props) {
       </ScrollTop>
     </div>
   );
-}
+};
