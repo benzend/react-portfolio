@@ -1,7 +1,13 @@
 import { Nav } from "./index";
 import Projects from "./projectsPage__components/Projects";
 import Typography from "@material-ui/core/Typography";
-import { makeStyles } from "@material-ui/core";
+import { Footer } from "./Footer";
+
+import styled from "styled-components";
+
+const StyledDiv = styled.div`
+  margin-top: 30px;
+`;
 
 export const ProjectsPage = () => {
   return (
@@ -11,6 +17,9 @@ export const ProjectsPage = () => {
         Projects
       </Typography>
       <Projects />
+      <StyledDiv>
+        <Footer />
+      </StyledDiv>
     </div>
   );
 };

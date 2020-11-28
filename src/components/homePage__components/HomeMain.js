@@ -5,9 +5,9 @@ import HomeAboutSection from "./HomeAboutSection";
 function HomeMain() {
   return (
     <main className="main">
-      <HomeContactSection />
       <HomeProjectsSection />
       <HomeAboutSection />
+      <HomeContactSection />
     </main>
   );
 }

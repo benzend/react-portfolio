@@ -18,6 +18,7 @@ const StyledSection = styled.div`
     rgba(112, 168, 255, 1) 0%,
     rgba(129, 199, 255, 1) 100%
   );
+  border-radius: 10px;
   padding: 6%;
   margin: 8% 0;
   textArea {

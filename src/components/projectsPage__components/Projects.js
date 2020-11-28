@@ -1,11 +1,21 @@
 import Grid from "@material-ui/core/Grid";
 import Project from "./Project";
 
+import { makeStyles } from "@material-ui/core";
+
+const useStyles = makeStyles({
+  gridItem: {
+    margin: "10px",
+  },
+});
+
 function Projects() {
+  const classes = useStyles();
+
   return (
     <section id="projects" className="section">
-      <Grid spacing={5} justify="center" container>
-        <Grid item>
+      <Grid justify="center" container>
+        <Grid className={classes.gridItem} item>
           <Project
             headerTitle="Tic-Tac-Toe"
             headerSubheader="A vanilla JavaScript Application"
@@ -22,7 +32,7 @@ function Projects() {
             the old code in there, just commented out in case someone wants to look at it."
           />
         </Grid>
-        <Grid item>
+        <Grid className={classes.gridItem} item>
           <Project
             headerTitle="An RPG Game"
             headerSubheader="A vanilla JavaScript Application"
@@ -37,7 +47,7 @@ function Projects() {
             you can just eat it to gain health."
           />
         </Grid>
-        <Grid item>
+        <Grid className={classes.gridItem} item>
           <Project
             headerTitle="Accounting Website"
             headerSubheader="A Vanilla JavaScript Website"
@@ -51,7 +61,7 @@ function Projects() {
             is the animations I made in the bottom right of the footer for the little social icons."
           />
         </Grid>
-        <Grid item>
+        <Grid className={classes.gridItem} item>
           <Project
             headerTitle="JumpStart Website"
             headerSubheader="A Vanilla JavaScript Application"
@@ -66,7 +76,7 @@ function Projects() {
             Also figured out how to design contact and sign up forms here."
           />
         </Grid>
-        <Grid item>
+        <Grid className={classes.gridItem} item>
           <Project
             headerTitle="Language Learning App"
             headerSubheader="A React Application"
@@ -74,6 +84,7 @@ function Projects() {
             imgTitle="An image of my language learning application"
             miniDescription="An app designed to help teach people other languages."
             ghHref="https://github.com/benzend/language-learning-app"
+            liveHref="https://thirsty-wright-d1d04e.netlify.app/"
             fullDescription="The Goal of this project was to create something larger and more complex
             displaying my React.js ability. It definitely has a Duolingo-esk feeling
             to it, having a main section that displays your lessons you can do and in 
@@ -83,7 +94,7 @@ function Projects() {
             Also this is a work in progress, I do want it to be a full fledged app in the future."
           />
         </Grid>
-        <Grid item>
+        <Grid className={classes.gridItem} item>
           <Project
             headerTitle="Portfolio"
             headerSubheader="A vanilla JavaScript Website"
@@ -96,64 +107,19 @@ function Projects() {
             really has an fun look to it. "
           />
         </Grid>
-        <Grid item>
+        <Grid className={classes.gridItem} item>
           <Project
             headerTitle="Pomodoro Timer"
             headerSubheader="A vanilla JavaScript Application"
             imgUrl="./images/thumbnails/PomodoroTimer-thumbnail.png"
             imgTitle="An Image of a Pomodoro Timer"
             miniDescription="A type of timer that is used for efficient time management."
-            ghHref="#"
+            ghHref="https://github.com/benzend/pomodoro-timer"
+            liveHref="https://benzend.github.io/pomodoro-timer/"
             fullDescription="I built this in a challenge against someone else to see who could have the 
             best design/functionality in a day. Learned a lot about JavaScript and using 
             numbers in it; converting seconds to minutes to hours and stuff like that. I also
             implemented a background changer just for the hell of it."
-          />
-        </Grid>
-        <Grid item>
-          <Project
-            headerTitle="An RPG Game"
-            headerSubheader="A vanilla JavaScript Application"
-            imgUrl=""
-            imgTitle="An Image of My RPG Game"
-            miniDescription="This is a tiny game where you can attack 3 enemies, buy health, and eat food to gain health."
-            ghHref="https://github.com/benzend/pomodoro-timer"
-            liveHref="https://benzend.github.io/pomodoro-timer/"
-            fullDescription="This project helped engrain JavaScript fundamentals into my head, while letting me know
-            where I was at with JS. The bot you play against is not
-            smart so winning against it is easy.  The biggest thing I learned here
-            was about using lots of checks and rewriting so much so much code. I left 
-            the old code in there, just commented out in case someone wants to look at it."
-          />
-        </Grid>
-        <Grid item>
-          <Project
-            headerTitle="An RPG Game"
-            headerSubheader="A vanilla JavaScript Application"
-            imgUrl=""
-            imgTitle="An Image of My RPG Game"
-            miniDescription="This is a tiny game where you can attack 3 enemies, buy health, and eat food to gain health."
-            ghHref="#"
-            fullDescription="This project helped engrain JavaScript fundamentals into my head, while letting me know
-            where I was at with JS. The bot you play against is not
-            smart so winning against it is easy.  The biggest thing I learned here
-            was about using lots of checks and rewriting so much so much code. I left 
-            the old code in there, just commented out in case someone wants to look at it."
-          />
-        </Grid>
-        <Grid item>
-          <Project
-            headerTitle="An RPG Game"
-            headerSubheader="A vanilla JavaScript Application"
-            imgUrl=""
-            imgTitle="An Image of My RPG Game"
-            miniDescription="This is a tiny game where you can attack 3 enemies, buy health, and eat food to gain health."
-            ghHref="#"
-            fullDescription="This project helped engrain JavaScript fundamentals into my head, while letting me know
-            where I was at with JS. The bot you play against is not
-            smart so winning against it is easy.  The biggest thing I learned here
-            was about using lots of checks and rewriting so much so much code. I left 
-            the old code in there, just commented out in case someone wants to look at it."
           />
         </Grid>
       </Grid>

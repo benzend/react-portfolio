@@ -5,6 +5,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import styled from "styled-components";
 
 import { Link } from "react-router-dom";
+import { Footer } from "../Footer";
 
 const StyledSection = styled.div`
   background: rgb(112, 168, 255);
@@ -15,6 +16,10 @@ const StyledSection = styled.div`
   );
   padding: 6%;
   margin: 8% 0;
+  border-radius: 10px;
+  button {
+    margin-top: 30px;
+  }
 `;
 
 export default function HomeContactSection() {
@@ -50,9 +55,7 @@ export default function HomeContactSection() {
           </div>
         </Carousel>
         <Link to="projects">
-          <Button color="secondary" style={{ marginTop: "30px" }}>
-            See More
-          </Button>
+          <Button color="secondary">See More</Button>
         </Link>
       </Box>
     </StyledSection>

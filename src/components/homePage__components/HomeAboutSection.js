@@ -14,6 +14,7 @@ const StyledSection = styled.div`
   );
   padding: 6%;
   margin: 8% 0;
+  border-radius: 10px;
 `;
 
 export default function HomeAboutSection() {
@@ -25,9 +26,9 @@ export default function HomeAboutSection() {
         </Typography>
       </Box>
       <Box textAlign="center" margin="0 3rem">
-        <Typography variant="p">
+        <Typography variant="body1">
           As a passionate developer, my goals are to keep progressing in all
-          areas of web development. From UI to backend, my skills will keep
+          areas of web development. From frontend to back, my skills will keep
           moving forward by building and learning everything that I can.
         </Typography>
         <br />

@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import { GitHub, Twitter, LinkedIn } from "@material-ui/icons";
+
 const StyledFooter = styled.footer`
   display: flex;
   padding: 1.3rem;
@@ -25,6 +27,18 @@ export const Footer = () => {
   return (
     <StyledFooter className="footer">
       <a href="http://madeunlinked.com">@madeunlinked</a>
+      <a href="https://github.com/benzend" target="_blank">
+        <GitHub />
+      </a>
+      <a href="https://twitter.com/TheBenzend" target="_blank">
+        <Twitter />
+      </a>
+      <a
+        href="https://www.linkedin.com/in/benjamin-scott-62a3741b1/"
+        target="_blank"
+      >
+        <LinkedIn />
+      </a>
     </StyledFooter>
   );
 };

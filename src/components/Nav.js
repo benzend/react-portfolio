@@ -37,6 +37,7 @@ const drawerWidth = 240;
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
+    zIndex: 10,
   },
   appBar: {
     transition: theme.transitions.create(["margin", "width"], {
@@ -213,14 +214,6 @@ export const Nav = (props) => {
               <ListItemText primary="About" />
             </ListItem>
           </Link>
-          <Link style={linkStyle} to="/contact">
-            <ListItem button key="Contact">
-              <ListItemIcon>
-                <ContactMailIcon />
-              </ListItemIcon>
-              <ListItemText primary="Contact" />
-            </ListItem>
-          </Link>
         </List>
         <Divider />
         <List>
@@ -245,7 +238,7 @@ export const Nav = (props) => {
       >
         <div className={classes.drawerHeader} />
       </main>
-      <ScrollTop style={{ zIndex: 5 }} {...props}>
+      <ScrollTop {...props}>
         <Fab color="secondary" size="small" aria-label="scroll back to top">
           <KeyboardArrowUpIcon />
         </Fab>
