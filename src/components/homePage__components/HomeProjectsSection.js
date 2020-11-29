@@ -48,19 +48,31 @@ export default function HomeContactSection() {
           autoPlay={true}
         >
           <div>
-            <img src=".\images\thumbnails\TicTacToe-example-thumbnail.png" />
+            <img
+              src=".\images\thumbnails\TicTacToe-example-thumbnail.png"
+              alt="tic-tac-toe project example"
+            />
             <p className="legend">Tic-Tac-Toe</p>
           </div>
           <div>
-            <img src=".\images\thumbnails\LanguageApp-thumbnail.png" />
+            <img
+              src=".\images\thumbnails\LanguageApp-thumbnail.png"
+              alt="language learning project example"
+            />
             <p className="legend">Language Learning App</p>
           </div>
           <div>
-            <img src=".\images\thumbnails\Accounting-Website-example-thumbnail.png" />
+            <img
+              src=".\images\thumbnails\Accounting-Website-example-thumbnail.png"
+              alt="Accounting website project example"
+            />
             <p className="legend">Accounting Website</p>
           </div>
           <div>
-            <img src=".\images\Pomodoro Timer - Google Chrome 10_13_2020 12_17_19 AM.png" />
+            <img
+              src=".\images\Pomodoro Timer - Google Chrome 10_13_2020 12_17_19 AM.png"
+              alt="Pomodoro timer project example"
+            />
             <p className="legend">Pomodoro Timer</p>
           </div>
         </Carousel>

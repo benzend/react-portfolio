@@ -27,13 +27,14 @@ export const Footer = () => {
   return (
     <StyledFooter className="footer">
       <a href="http://madeunlinked.com">@madeunlinked</a>
-      <a href="https://github.com/benzend" target="_blank">
+      <a rel="noreferrer" href="https://github.com/benzend" target="_blank">
         <GitHub />
       </a>
-      <a href="https://twitter.com/TheBenzend" target="_blank">
+      <a rel="noreferrer" href="https://twitter.com/TheBenzend" target="_blank">
         <Twitter />
       </a>
       <a
+        rel="noreferrer"
         href="https://www.linkedin.com/in/benjamin-scott-62a3741b1/"
         target="_blank"
       >

@@ -32,7 +32,10 @@ function HomeHeader() {
   const matches900 = useMediaQuery("(min-width: 900px");
   return (
     <StyledHeader className="header">
-      <img src="https://img.icons8.com/bubbles/256/000000/user-male.png" />
+      <img
+        src="https://img.icons8.com/bubbles/256/000000/user-male.png"
+        alt="Cartoonized profile picture"
+      />
       <Box className={matches900 ? classes.headerTxt : ""}>
         <HomeHeaderTitle />
         <HomeHeaderSubtitle />
