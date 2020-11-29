@@ -48,7 +48,7 @@ export default function HomeContactSection() {
         </Typography>
       </Box>
       <Box textAlign="center">
-        <form name="contact" netlify netlify-honeypot="bot-field">
+        <form name="contact" netlify="true" netlify-honeypot="bot-field">
           <input type="hidden" name="form-name" value="contact" />
           <FormControl>
             <InputLabel htmlFor="name">Name</InputLabel>

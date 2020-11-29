@@ -18,7 +18,6 @@ import ListItemText from "@material-ui/core/ListItemText";
 import HomeIcon from "@material-ui/icons/Home";
 import WorkIcon from "@material-ui/icons/Work";
 import InfoIcon from "@material-ui/icons/Info";
-import ContactMailIcon from "@material-ui/icons/ContactMail";
 import ImportContactsIcon from "@material-ui/icons/ImportContacts";
 import BuildIcon from "@material-ui/icons/Build";
 import useScrollTrigger from "@material-ui/core/useScrollTrigger";
