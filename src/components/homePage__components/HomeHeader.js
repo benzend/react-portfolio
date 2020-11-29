@@ -34,7 +34,7 @@ function HomeHeader() {
     <StyledHeader className="header">
       <img
         src="https://img.icons8.com/bubbles/256/000000/user-male.png"
-        alt="Cartoonized profile picture"
+        alt="Cartoonized profile"
       />
       <Box className={matches900 ? classes.headerTxt : ""}>
         <HomeHeaderTitle />
