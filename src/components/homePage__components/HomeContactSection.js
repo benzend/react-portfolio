@@ -29,6 +29,14 @@ const StyledSection = styled.div`
     border-radius: 5px;
     padding: 4px;
   }
+  @media (min-width: 900px) {
+    margin: 20px 10px 10px 10px;
+    padding: 2%;
+    min-width: 30%;
+    h3 {
+      margin-top: 10px;
+    }
+  }
 `;
 
 export default function HomeContactSection() {

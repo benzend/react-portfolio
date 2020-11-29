@@ -15,6 +15,17 @@ const StyledSection = styled.div`
   padding: 6%;
   margin: 8% 0;
   border-radius: 10px;
+  @media (min-width: 900px) {
+    margin: 20px 10px 10px 10px;
+    padding: 2%;
+    min-width: 30%;
+    .MuiBox-root-22 {
+      margin: 40px 0 0 0;
+    }
+    .btn-container {
+      margin-top: 55px;
+    }
+  }
 `;
 
 export default function HomeAboutSection() {
@@ -32,12 +43,11 @@ export default function HomeAboutSection() {
           moving forward by building and learning everything that I can.
         </Typography>
         <br />
-
-        <Link to="about">
-          <Button color="secondary" style={{ marginTop: "30px" }}>
-            Read More
-          </Button>
-        </Link>
+        <div className="btn-container">
+          <Link to="about">
+            <Button color="secondary">Read More</Button>
+          </Link>
+        </div>
       </Box>
     </StyledSection>
   );

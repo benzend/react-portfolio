@@ -5,7 +5,6 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import styled from "styled-components";
 
 import { Link } from "react-router-dom";
-import { Footer } from "../Footer";
 
 const StyledSection = styled.div`
   background: rgb(112, 168, 255);
@@ -20,6 +19,17 @@ const StyledSection = styled.div`
   button {
     margin-top: 30px;
   }
+  @media (min-width: 900px) {
+    margin: 20px 10px 10px 10px;
+    padding: 2%;
+    max-width: 30%;
+    .box {
+      margin-top: 37px;
+    }
+    .btn-container {
+      margin-top: 44px;
+    }
+  }
 `;
 
 export default function HomeContactSection() {
@@ -30,7 +40,7 @@ export default function HomeContactSection() {
           Projects
         </Typography>
       </Box>
-      <Box textAlign="center" width="300px" margin="auto">
+      <Box className="box" textAlign="center" width="auto" margin="auto">
         <Carousel
           showThumbs={false}
           transitionTime={800}
@@ -54,9 +64,11 @@ export default function HomeContactSection() {
             <p className="legend">Pomodoro Timer</p>
           </div>
         </Carousel>
-        <Link to="projects">
-          <Button color="secondary">See More</Button>
-        </Link>
+        <div className="btn-container">
+          <Link to="projects">
+            <Button color="secondary">See More</Button>
+          </Link>
+        </div>
       </Box>
     </StyledSection>
   );

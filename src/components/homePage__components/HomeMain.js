@@ -2,13 +2,30 @@ import HomeContactSection from "./HomeContactSection";
 import HomeProjectsSection from "./HomeProjectsSection";
 import HomeAboutSection from "./HomeAboutSection";
 
+import styled from "styled-components";
+
+const StyledMain = styled.main`
+  max-width: 1000px;
+  margin: auto;
+  @media (min-width: 900px) {
+    h3 {
+      font-size: 2.7rem;
+    }
+    display: flex;
+    margin-bottom: 180px;
+    button {
+      font-size: 1rem;
+    }
+  }
+`;
+
 function HomeMain() {
   return (
-    <main className="main">
+    <StyledMain className="main">
       <HomeProjectsSection />
       <HomeAboutSection />
       <HomeContactSection />
-    </main>
+    </StyledMain>
   );
 }
 

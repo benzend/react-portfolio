@@ -3,6 +3,11 @@ import styled from "styled-components";
 
 const StyledDiv = styled.div`
   text-shadow: 3px 3px 5px #0009;
+  @media (min-width: 900px) {
+    h1 {
+      font-size: 3.2rem;
+    }
+  }
 `;
 
 function HomeHeaderTitle() {
