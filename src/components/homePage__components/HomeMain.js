@@ -9,7 +9,7 @@ const StyledMain = styled.main`
   margin: auto;
   @media (min-width: 900px) {
     h3 {
-      font-size: 2.7rem;
+      font-size: 2.2rem;
     }
     display: flex;
     margin-bottom: 180px;

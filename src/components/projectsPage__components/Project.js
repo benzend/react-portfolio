@@ -13,12 +13,16 @@ import { red } from "@material-ui/core/colors";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import LanguageIcon from "@material-ui/icons/Language";
+import { useMediaQuery } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: 350,
     borderRadius: 20,
     boxShadow: "2px 3px 5px #0004",
+  },
+  rootWide: {
+    margin: "30px",
   },
   media: {
     height: 0,
@@ -41,6 +45,8 @@ const useStyles = makeStyles((theme) => ({
 
 export default function RecipeReviewCard(props) {
   const classes = useStyles();
+  const media900 = useMediaQuery("(min-width: 900px)");
+
   const [expanded, setExpanded] = React.useState(false);
 
   const handleExpandClick = () => {
@@ -48,7 +54,7 @@ export default function RecipeReviewCard(props) {
   };
 
   return (
-    <Card className={classes.root}>
+    <Card className={`${classes.root} ${media900 ? classes.rootWide : ""}`}>
       <CardHeader title={props.headerTitle} subheader={props.headerSubheader} />
       <CardMedia
         className={classes.media}

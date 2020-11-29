@@ -48,11 +48,13 @@ export default function HomeContactSection() {
         </Typography>
       </Box>
       <Box textAlign="center">
-        <form>
+        <form name="contact" netlify netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="contact" />
           <FormControl>
             <InputLabel htmlFor="name">Name</InputLabel>
             <Input
               id="name"
+              name="name"
               type="text"
               aria-describedby="An input for your name"
               required
@@ -63,6 +65,7 @@ export default function HomeContactSection() {
             <InputLabel htmlFor="email">Email</InputLabel>
             <Input
               id="email"
+              name="email"
               type="email"
               aria-describedby="An input for you email address"
               required
@@ -73,6 +76,7 @@ export default function HomeContactSection() {
             <InputLabel htmlFor="tel">Phone Number</InputLabel>
             <Input
               id="tel"
+              name="tel"
               type="tel"
               aria-describedby="An input for your phone number"
             />
@@ -84,7 +88,8 @@ export default function HomeContactSection() {
           <FormControl>
             <TextareaAutosize
               placeholder="What would you like to say?"
-              id="text-area"
+              id="message"
+              name="message"
               rows="5"
               cols="28"
             ></TextareaAutosize>

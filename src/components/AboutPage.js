@@ -27,6 +27,7 @@ export const AboutPage = () => {
             <li>Semantic HTML</li>
             <li>CSS Variables</li>
             <li>Bootstrap</li>
+            <li>Material</li>
             <li>SASS</li>
           </ul>
           <p>
@@ -70,9 +71,10 @@ export const AboutPage = () => {
             Mosh and others that have created web development content. I have
             also learned from Udemy courses and from the Head First series. When
             it comes to mentorship, I have had one person review and give me
-            guidance who is Adrian Bigaj, a Sr. frontend React developer with
+            guidance who is Adrian Bigaj, a lead front-end React developer with
             lots of experience.
           </p>
+          <br />
         </Typography>
       </Container>
       <Footer />
