@@ -48,7 +48,7 @@ export default function HomeContactSection() {
         </Typography>
       </Box>
       <Box textAlign="center">
-        <form name="contact" method="POST" data-netlify="true" action="/">
+        <form name="contact" method="POST" data-netlify="true">
           <input type="hidden" name="form-name" value="contact" />
           <FormControl>
             <InputLabel htmlFor="name">Name</InputLabel>
