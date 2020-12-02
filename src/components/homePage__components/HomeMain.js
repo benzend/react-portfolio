@@ -8,23 +8,22 @@ const StyledMain = styled.main`
   max-width: 1000px;
   margin: auto;
   @media (min-width: 900px) {
-    h3 {
-      font-size: 2.2rem;
-    }
-    display: flex;
     margin-bottom: 180px;
     button {
       font-size: 1rem;
     }
+    h3 {
+      font-size: 2.3rem;
+    }
   }
 `;
 
-function HomeMain() {
+function HomeMain({ media900 }) {
   return (
     <StyledMain className="main">
-      <HomeProjectsSection />
-      <HomeAboutSection />
-      <HomeContactSection />
+      <HomeProjectsSection media900={media900} />
+      <HomeAboutSection media900={media900} />
+      <HomeContactSection media900={media900} />
     </StyledMain>
   );
 }

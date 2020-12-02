@@ -7,7 +7,7 @@ const useStyles = makeStyles({
   headerTxt: {
     position: "relative",
     top: "-30%",
-    left: "5%",
+    marginLeft: "20%",
   },
 });
 
@@ -21,8 +21,7 @@ const StyledHeader = styled.header`
       width: 350px;
       position: relative;
       top: 10%;
-      left: -17%;
-      z-index: -1;
+      left: -20%;
     }
   }
 `;
