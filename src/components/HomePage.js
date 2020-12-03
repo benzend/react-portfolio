@@ -1,7 +1,7 @@
 import HomeHeader from "./homePage__components/HomeHeader";
 import HomeMain from "./homePage__components/HomeMain";
-import { Nav } from "./index";
-import { Footer } from "./index";
+import { Nav } from "./Nav";
+import { Footer } from "./Footer";
 
 export const HomePage = () => {
   return (

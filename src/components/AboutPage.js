@@ -1,9 +1,17 @@
-import { Nav } from "./index";
-
-import { Container, Typography } from "@material-ui/core";
+import { Nav } from "./Nav";
 import { Footer } from "./Footer";
 
+import { Container, Typography, makeStyles } from "@material-ui/core";
+
+const useStyles = makeStyles({
+  orangeTxt: {
+    color: "#f98b00",
+    fontSize: "1rem",
+  },
+});
+
 export const AboutPage = () => {
+  const classes = useStyles();
   return (
     <>
       <Container>
@@ -20,19 +28,18 @@ export const AboutPage = () => {
           concepts. I can build any responsive site with ease, using things
           like:
         </Typography>
-        <br />
-        <Typography color="primary" variant="body1" component="ul">
-          <ul>
-            <li>ES6 and ES5 syntax</li>
-            <li>Flex Box</li>
-            <li>Flex Grid (I prefer Flex Box)</li>
-            <li>Semantic HTML</li>
-            <li>CSS Variables</li>
-            <li>Bootstrap</li>
-            <li>Material</li>
-            <li>SASS</li>
-          </ul>
-        </Typography>
+
+        <ul className={classes.orangeTxt}>
+          <li>ES6 and ES5 syntax</li>
+          <li>Flex Box</li>
+          <li>Flex Grid (I prefer Flex Box)</li>
+          <li>Semantic HTML</li>
+          <li>CSS Variables</li>
+          <li>Bootstrap</li>
+          <li>Material</li>
+          <li>SASS</li>
+        </ul>
+
         <br />
 
         <Typography color="primary" variant="body1" component="p">
@@ -45,10 +52,9 @@ export const AboutPage = () => {
         <br />
 
         <Typography color="primary" variant="body1" component="p">
-          <span class="underline">As a disclaimer:</span> I do leave some time
-          for weekends with friends, taking my dog for walks and eating, and
-          sometimes there are days where I don't put in the time but they are
-          however rare.
+          As a disclaimer: I do leave some time for weekends with friends,
+          taking my dog for walks and eating, and sometimes there are days where
+          I don't put in the time but they are however rare.
         </Typography>
         <br />
 

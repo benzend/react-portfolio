@@ -1,6 +1,6 @@
 import React from "react";
 import clsx from "clsx";
-import { makeStyles, useTheme, ThemeProvider } from "@material-ui/core/styles";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import AppBar from "@material-ui/core/AppBar";
@@ -241,7 +241,7 @@ export const Nav = (props) => {
         <div className={classes.drawerHeader} />
       </main>
       <ScrollTop {...props}>
-        <Fab color="secondary" size="small" aria-label="scroll back to top">
+        <Fab color="primary" size="small" aria-label="scroll back to top">
           <KeyboardArrowUpIcon />
         </Fab>
       </ScrollTop>

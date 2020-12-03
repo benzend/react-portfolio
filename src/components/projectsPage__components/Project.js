@@ -69,14 +69,14 @@ export default function RecipeReviewCard(props) {
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-        <IconButton color="secondary" href={props.ghHref}>
+        <IconButton color="default" href={props.ghHref}>
           <GitHubIcon />
         </IconButton>
-        <IconButton color="secondary" href={props.liveHref}>
+        <IconButton color="default" href={props.liveHref}>
           <LanguageIcon />
         </IconButton>
         <IconButton
-          color="secondary"
+          color="default"
           className={clsx(classes.expand, {
             [classes.expandOpen]: expanded,
           })}

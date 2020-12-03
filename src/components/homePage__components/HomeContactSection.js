@@ -81,6 +81,7 @@ export default function HomeContactSection() {
             <img
               className={classes.img}
               src="https://www.dentonsgmbh.com/-/media/images/website/background-images/landing-pages/whats-different-about-dentons/contact-us/contact3.jpg"
+              alt="There is a person with a phone and a keyboard"
             />
           </div>
         ) : null}
