@@ -18,12 +18,12 @@ const StyledMain = styled.main`
   }
 `;
 
-function HomeMain({ media900 }) {
+function HomeMain() {
   return (
     <StyledMain className="main">
-      <HomeProjectsSection media900={media900} />
-      <HomeAboutSection media900={media900} />
-      <HomeContactSection media900={media900} />
+      <HomeProjectsSection />
+      <HomeAboutSection />
+      <HomeContactSection />
     </StyledMain>
   );
 }

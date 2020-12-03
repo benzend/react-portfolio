@@ -14,7 +14,7 @@ const StyledDiv = styled.div`
 function HomeHeaderSubtitle() {
   return (
     <StyledDiv className="header__subtitle">
-      <Typography component="h2" variant="h5">
+      <Typography color="primary" component="h2" variant="h5">
         Frontend Web Developer
       </Typography>
     </StyledDiv>

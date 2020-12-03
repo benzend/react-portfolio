@@ -4,11 +4,8 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 import { Link } from "react-router-dom";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   root: {
-    background: "rgb(112, 168, 255)",
-    background:
-      "linear-gradient(34deg, rgba(112, 168, 255, 1) 0%,    rgba(129, 199, 255, 1) 100%  )",
     padding: "6%",
     margin: "8% 0",
     borderRadius: "10px",
@@ -16,19 +13,27 @@ const useStyles = makeStyles({
   root900: {
     margin: "30% 0",
   },
-});
+  text: {
+    [theme.breakpoints.up("lg")]: {
+      fontSize: "1.2rem",
+    },
+  },
+  btn: {
+    [theme.breakpoints.up("lg")]: {},
+  },
+}));
 
 export default function HomeAboutSection({ media900 }) {
   const classes = useStyles();
   return (
     <section className={media900 ? classes.root900 : classes.root}>
       <Box textAlign="center" padding="10px 0 30px">
-        <Typography variant="h5" component="h3">
+        <Typography color="primary" variant="h5" component="h3">
           About
         </Typography>
       </Box>
       <Box textAlign="center" margin="0 3rem">
-        <Typography variant="body1">
+        <Typography className={classes.text} color="primary" variant="body1">
           As a passionate developer, my goals are to keep progressing in all
           areas of web development. From frontend to back, my skills will keep
           moving forward by building and learning everything that I can.
@@ -36,7 +41,9 @@ export default function HomeAboutSection({ media900 }) {
         <br />
         <div className="btn-container">
           <Link to="about">
-            <Button color="secondary">Read More</Button>
+            <Button className={classes.btn} color="secondary">
+              Read More
+            </Button>
           </Link>
         </div>
       </Box>

@@ -1,6 +1,6 @@
 import React from "react";
 import clsx from "clsx";
-import { makeStyles, useTheme } from "@material-ui/core/styles";
+import { makeStyles, useTheme, ThemeProvider } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import AppBar from "@material-ui/core/AppBar";
@@ -147,7 +147,9 @@ export const Nav = (props) => {
   return (
     <div className={classes.root}>
       <CssBaseline />
+
       <AppBar
+        color="primary"
         position="fixed"
         className={clsx(classes.appBar, {
           [classes.appBarShift]: open,
@@ -168,6 +170,7 @@ export const Nav = (props) => {
           </Typography>
         </Toolbar>
       </AppBar>
+
       <Toolbar id="back-to-top-anchor" />
       <Drawer
         className={classes.drawer}
@@ -179,7 +182,7 @@ export const Nav = (props) => {
         }}
       >
         <div className={classes.drawerHeader}>
-          <IconButton onClick={handleDrawerClose}>
+          <IconButton color="primary" onClick={handleDrawerClose}>
             {theme.direction === "ltr" ? (
               <ChevronLeftIcon />
             ) : (
@@ -190,9 +193,9 @@ export const Nav = (props) => {
         <Divider />
         <List>
           <Link style={linkStyle} to="/">
-            <ListItem button key="Home">
+            <ListItem color="primary" button key="Home">
               <ListItemIcon>
-                <HomeIcon />
+                <HomeIcon color="primary" />
               </ListItemIcon>
               <ListItemText primary="Home" />
             </ListItem>
@@ -200,7 +203,7 @@ export const Nav = (props) => {
           <Link style={linkStyle} to="/projects">
             <ListItem button key="Projects">
               <ListItemIcon>
-                <WorkIcon />
+                <WorkIcon color="primary" />
               </ListItemIcon>
               <ListItemText primary="Projects" />
             </ListItem>
@@ -208,7 +211,7 @@ export const Nav = (props) => {
           <Link style={linkStyle} to="/about">
             <ListItem button key="About">
               <ListItemIcon>
-                <InfoIcon />
+                <InfoIcon color="primary" />
               </ListItemIcon>
               <ListItemText primary="About" />
             </ListItem>
@@ -218,13 +221,13 @@ export const Nav = (props) => {
         <List>
           <ListItem button key="Blog">
             <ListItemIcon>
-              <ImportContactsIcon />
+              <ImportContactsIcon color="primary" />
             </ListItemIcon>
             <ListItemText primary="Blog" />
           </ListItem>
           <ListItem button key="Services">
             <ListItemIcon>
-              <BuildIcon />
+              <BuildIcon color="primary" />
             </ListItemIcon>
             <ListItemText primary="Services" />
           </ListItem>

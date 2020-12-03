@@ -1,45 +1,74 @@
-import styled from "styled-components";
-
 import { GitHub, Twitter, LinkedIn } from "@material-ui/icons";
+import { Typography, Link, Grid, Box, makeStyles } from "@material-ui/core";
 
-const StyledFooter = styled.footer`
-  display: flex;
-  padding: 1.3rem;
-  background: rgb(0, 61, 125);
-  background: linear-gradient(
-    34deg,
-    rgba(0, 61, 125, 1) 0%,
-    rgba(0, 84, 166, 1) 100%
-  );
-  justify-content: center;
-  align-items: center;
-  a {
-    margin: 5px;
-    color: lightBlue;
-    text-decoration: none;
-    &:hover {
-      color: white;
-    }
-  }
-`;
+const useStyles = makeStyles({
+  textWhite: {
+    color: "white",
+    transition: "all .2s ease",
+    "&:hover": {
+      color: "#87ffff",
+    },
+  },
+  container: {
+    padding: "15px",
+  },
+});
 
 export const Footer = () => {
+  const classes = useStyles();
   return (
-    <StyledFooter className="footer">
-      <a href="http://madeunlinked.com">@madeunlinked</a>
-      <a rel="noreferrer" href="https://github.com/benzend" target="_blank">
-        <GitHub />
-      </a>
-      <a rel="noreferrer" href="https://twitter.com/TheBenzend" target="_blank">
-        <Twitter />
-      </a>
-      <a
-        rel="noreferrer"
-        href="https://www.linkedin.com/in/benjamin-scott-62a3741b1/"
-        target="_blank"
+    <Box className={classes.container} bgcolor="#f98b00">
+      <Grid
+        justify="center"
+        alignItems="center"
+        spacing={3}
+        direction="row"
+        container
       >
-        <LinkedIn />
-      </a>
-    </StyledFooter>
+        <Grid item>
+          <Typography>
+            <Link className={classes.textWhite} href="http://madeunlinked.com">
+              @madeunlinked
+            </Link>
+          </Typography>
+        </Grid>
+        <Grid item>
+          <Typography>
+            <Link
+              className={classes.textWhite}
+              rel="noreferrer"
+              href="https://twitter.com/TheBenzend"
+              target="_blank"
+            >
+              <Twitter />
+            </Link>
+          </Typography>
+        </Grid>
+        <Grid item>
+          <Typography>
+            <Link
+              className={classes.textWhite}
+              rel="noreferrer"
+              href="https://github.com/benzend"
+              target="_blank"
+            >
+              <GitHub />
+            </Link>
+          </Typography>
+        </Grid>
+        <Grid item>
+          <Typography>
+            <Link
+              className={classes.textWhite}
+              rel="noreferrer"
+              href="https://www.linkedin.com/in/benjamin-scott-62a3741b1/"
+              target="_blank"
+            >
+              <LinkedIn />
+            </Link>
+          </Typography>
+        </Grid>
+      </Grid>
+    </Box>
   );
 };

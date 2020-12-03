@@ -8,15 +8,11 @@ import {
   TextareaAutosize,
   Typography,
   makeStyles,
+  useMediaQuery,
 } from "@material-ui/core";
 
-import ContactMailIcon from "@material-ui/icons/ContactMail";
-
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   root: {
-    background: "rgb(112, 168, 255)",
-    background:
-      "linear-gradient(34deg, rgba(112, 168, 255, 1) 0%, rgba(129, 199, 255, 1) 100%)",
     borderRadius: "10px",
     padding: "6%",
     margin: "8% 0",
@@ -29,7 +25,6 @@ const useStyles = makeStyles({
     borderRadius: "5px",
     padding: "4px",
   },
-  root900: {},
   formBox: {},
   formBox900: {
     display: "flex",
@@ -39,40 +34,63 @@ const useStyles = makeStyles({
     borderRadius: "20px",
     marginTop: "4%",
   },
-  form900: {
-    flex: 1,
+  form: {
+    backgroundColor: "#f98b0055",
+    padding: "10px 30px",
+    borderRadius: "15px",
+    color: "#f98b00",
+    width: "100%",
+    [theme.breakpoints.up("md")]: {
+      flex: 1,
+      padding: ".3%",
+      margin: "1%",
+    },
+    [theme.breakpoints.up("lg")]: {
+      margin: "2%",
+      padding: "0",
+    },
   },
-  imgContainer900: {
+  imgContainer: {
     flex: 1,
+    [theme.breakpoints.up("md")]: {
+      margin: "1%",
+    },
   },
-  img900: {
+  img: {
     width: "100%",
     borderRadius: "20px",
   },
-});
+  txtOrange: {
+    color: "#f98b00",
+  },
+}));
 
-export default function HomeContactSection({ media900 }) {
+export default function HomeContactSection() {
   const classes = useStyles();
+  const media900 = useMediaQuery("(min-width: 900px");
   return (
-    <section className={media900 ? classes.root900 : classes.root}>
+    <section className={classes.root}>
       <Box textAlign="center">
-        <Typography variant="h5" component="h3">
+        <Typography color="primary" variant="h5" component="h3">
           Contact Me
         </Typography>
       </Box>
       <Box className={classes.formBox900} textAlign="center">
         {media900 ? (
-          <div className={classes.imgContainer900}>
+          <div className={classes.imgContainer}>
             <img
-              className={classes.img900}
+              className={classes.img}
               src="https://www.dentonsgmbh.com/-/media/images/website/background-images/landing-pages/whats-different-about-dentons/contact-us/contact3.jpg"
             />
           </div>
         ) : null}
-        <form className={classes.form900} name="contact" method="POST">
+        <form className={classes.form} name="contact" method="POST">
           <input type="hidden" name="form-name" value="contact" />
+
           <FormControl>
-            <InputLabel htmlFor="name">Name</InputLabel>
+            <InputLabel className={classes.txtOrange} htmlFor="name">
+              Name
+            </InputLabel>
             <Input
               id="name"
               name="name"
@@ -83,7 +101,9 @@ export default function HomeContactSection({ media900 }) {
           </FormControl>
           <br />
           <FormControl>
-            <InputLabel htmlFor="email">Email</InputLabel>
+            <InputLabel className={classes.txtOrange} htmlFor="email">
+              Email
+            </InputLabel>
             <Input
               id="email"
               name="email"
@@ -94,14 +114,16 @@ export default function HomeContactSection({ media900 }) {
           </FormControl>
           <br />
           <FormControl>
-            <InputLabel htmlFor="tel">Phone Number</InputLabel>
+            <InputLabel className={classes.txtOrange} htmlFor="tel">
+              Phone Number
+            </InputLabel>
             <Input
               id="tel"
               name="tel"
               type="tel"
               aria-describedby="An input for your phone number"
             />
-            <FormHelperText id="my-helper-text">
+            <FormHelperText className={classes.txtOrange} id="my-helper-text">
               (Your phone number isn't required)
             </FormHelperText>
           </FormControl>
@@ -116,6 +138,7 @@ export default function HomeContactSection({ media900 }) {
               cols="28"
             ></TextareaAutosize>
           </FormControl>
+
           <Box marginTop="20px">
             <Button color="secondary" type="submit">
               Submit

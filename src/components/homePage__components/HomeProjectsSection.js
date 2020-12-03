@@ -1,34 +1,39 @@
-import { Box, Button, Typography, makeStyles } from "@material-ui/core";
+import {
+  Box,
+  Button,
+  Typography,
+  makeStyles,
+  useMediaQuery,
+} from "@material-ui/core";
 
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 import { Link } from "react-router-dom";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   root: {
-    background: "rgb(112, 168, 255)",
-    background:
-      "linear-gradient(34deg,rgba(112, 168, 255, 1) 0%,rgba(129, 199, 255, 1) 100%)",
     padding: "6%",
     margin: " 8% 0",
     borderRadius: "10px",
     button: {
       marginTop: "30px",
     },
+    [theme.breakpoints.up("md")]: {},
   },
-  root900: {
-    margin: "10% 2%",
+  btnStyle: {
+    marginTop: "30px",
   },
-});
+}));
 
-export default function HomeContactSection({ media900 }) {
+export default function HomeContactSection() {
   const classes = useStyles();
+  const media800 = useMediaQuery("(min-width: 800px)");
 
   return (
-    <section className={media900 ? classes.root900 : classes.root}>
+    <section className={classes.root}>
       <Box textAlign="center" padding="10px 0 30px">
-        <Typography variant="h5" component="h3">
+        <Typography color="primary" variant="h5" component="h3">
           Projects
         </Typography>
       </Box>
@@ -42,7 +47,7 @@ export default function HomeContactSection({ media900 }) {
           <div>
             <img
               src={
-                media900
+                media800
                   ? "./images/TicTacToe-example.png"
                   : "./images/thumbnails/TicTacToe-example-thumbnail.png"
               }
@@ -53,7 +58,7 @@ export default function HomeContactSection({ media900 }) {
           <div>
             <img
               src={
-                media900
+                media800
                   ? "./images/language-app.png"
                   : "./images/thumbnails/LanguageApp-thumbnail.png"
               }
@@ -64,7 +69,7 @@ export default function HomeContactSection({ media900 }) {
           <div>
             <img
               src={
-                media900
+                media800
                   ? "./images/Accounting-Website-example.png"
                   : "./images/thumbnails/Accounting-Website-example-thumbnail.png"
               }
@@ -75,7 +80,7 @@ export default function HomeContactSection({ media900 }) {
           <div>
             <img
               src={
-                media900
+                media800
                   ? "./images/pomodoro-timer.png"
                   : "./images/thumbnails/PomodoroTimer-thumbnail.png"
               }
@@ -86,7 +91,13 @@ export default function HomeContactSection({ media900 }) {
         </Carousel>
         <div className="btn-container">
           <Link to="projects">
-            <Button color="secondary">See More</Button>
+            <Button
+              variant="outlined"
+              className={classes.btnStyle}
+              color="secondary"
+            >
+              See More
+            </Button>
           </Link>
         </div>
       </Box>

@@ -13,7 +13,7 @@ const StyledDiv = styled.div`
 function HomeHeaderTitle() {
   return (
     <StyledDiv className="header__title">
-      <Typography component="h1" variant="h4">
+      <Typography color="primary" component="h1" variant="h4">
         Benjamin Scott
       </Typography>
     </StyledDiv>
