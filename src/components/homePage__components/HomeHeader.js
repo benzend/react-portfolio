@@ -1,6 +1,6 @@
 import HomeHeaderTitle from "./HomeHeaderTitle";
 import HomeHeaderSubtitle from "./HomeHeaderSubtitle";
-import { Box, makeStyles, useMediaQuery } from "@material-ui/core";
+import { Box, makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   header: {
