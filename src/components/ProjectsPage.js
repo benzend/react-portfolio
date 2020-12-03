@@ -10,27 +10,31 @@ const StyledDiv = styled.div`
   margin-top: 30px;
 `;
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   projects: {
-    margin: "50px auto 100px ",
-    maxWidth: "1400px",
+    [theme.breakpoints.up("sm")]: {
+      margin: "50px auto 100px ",
+      maxWidth: "1400px",
+    },
   },
-});
+}));
 
 export const ProjectsPage = () => {
   const classes = useStyles();
-  const media900 = useMediaQuery("(min-width: 900px)");
   return (
     <>
       <Nav />
       <Typography
+        color="primary"
         className="center"
-        variant={media900 ? "h3" : "h4"}
-        componet="h2"
+        variant="h3"
+        component="h2"
       >
         Projects
       </Typography>
-      <div className={media900 ? classes.projects : ""}>
+      <br />
+
+      <div className={classes.projects}>
         <Projects />
       </div>
       <StyledDiv>

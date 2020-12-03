@@ -20,6 +20,7 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: 350,
     borderRadius: 20,
     boxShadow: "2px 3px 5px #0004",
+    backgroundColor: "#f98b00aa",
   },
   rootWide: {
     margin: "30px",
@@ -27,6 +28,7 @@ const useStyles = makeStyles((theme) => ({
   media: {
     height: 0,
     paddingTop: "56.25%", // 16:9
+    boxShadow: "0 0 10px #0009",
   },
   expand: {
     transform: "rotate(0deg)",
@@ -62,18 +64,19 @@ export default function RecipeReviewCard(props) {
         title={props.imgTitle}
       />
       <CardContent>
-        <Typography variant="body2" color="textSecondary" component="p">
+        <Typography variant="body2" color="textPrimary" component="p">
           {props.miniDescription}
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-        <IconButton href={props.ghHref}>
+        <IconButton color="secondary" href={props.ghHref}>
           <GitHubIcon />
         </IconButton>
-        <IconButton href={props.liveHref}>
+        <IconButton color="secondary" href={props.liveHref}>
           <LanguageIcon />
         </IconButton>
         <IconButton
+          color="secondary"
           className={clsx(classes.expand, {
             [classes.expandOpen]: expanded,
           })}
