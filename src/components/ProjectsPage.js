@@ -4,7 +4,7 @@ import Typography from "@material-ui/core/Typography";
 import { Footer } from "./Footer";
 
 import styled from "styled-components";
-import { makeStyles, useMediaQuery } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core";
 
 const StyledDiv = styled.div`
   margin-top: 30px;

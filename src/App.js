@@ -7,8 +7,8 @@ import { AboutPage, ProjectsPage, HomePage } from "./components/index";
 function App() {
   return (
     <div className="App">
-      <video autoplay muted loop id="myVideo">
-        <source src="./videos/video.mp4" type="video/mp4" />
+      <video autoPlay muted loop id="myVideo">
+        <source src="./videos/inkvideo.mp4" type="video/mp4" />
       </video>
       <Router>
         <Switch>

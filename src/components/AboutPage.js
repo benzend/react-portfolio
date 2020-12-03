@@ -21,7 +21,7 @@ export const AboutPage = () => {
           like:
         </Typography>
         <br />
-        <Typography color="primary" variant="body1">
+        <Typography color="primary" variant="body1" component="ul">
           <ul>
             <li>ES6 and ES5 syntax</li>
             <li>Flex Box</li>
