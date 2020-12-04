@@ -4,7 +4,7 @@ import "fontsource-roboto";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { AboutPage, ProjectsPage, HomePage } from "./pages";
 
-function App() {
+export const App = () => {
   return (
     <div className="App">
       <video autoPlay muted loop id="myVideo">
@@ -20,6 +20,4 @@ function App() {
       </Router>
     </div>
   );
-}
-
-export default App;
+};
