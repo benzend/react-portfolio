@@ -26,7 +26,10 @@ export const Footer = () => {
       >
         <Grid item>
           <Typography>
-            <Link className={classes.links} href="http://madeunlinked.com">
+            <Link
+              className={classes.links}
+              href="https://benjamin-scott.netlify.app/"
+            >
               @madeunlinked
             </Link>
           </Typography>
