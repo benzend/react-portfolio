@@ -4,20 +4,15 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core";
+import { orange, yellow } from "@material-ui/core/colors";
 
 const theme = createMuiTheme({
   palette: {
     primary: {
-      light: "#ffbd45",
-      main: "#fb8c00",
-      dark: "#c25e00",
-      contrastText: "#fff",
+      main: orange[500],
     },
     secondary: {
-      light: "#88ffff",
-      main: "#4dd0e1",
-      dark: "#88ffff",
-      contrastText: "#000",
+      main: "#80deea",
     },
   },
 });

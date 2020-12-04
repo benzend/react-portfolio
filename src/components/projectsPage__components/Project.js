@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: 350,
     borderRadius: 20,
     boxShadow: "2px 3px 5px #0004",
-    backgroundColor: "#f98b00aa",
+    backgroundColor: "#ff9800",
   },
   rootWide: {
     margin: "30px",
@@ -42,6 +42,9 @@ const useStyles = makeStyles((theme) => ({
   },
   avatar: {
     backgroundColor: red[500],
+  },
+  buttons: {
+    color: "#000",
   },
 }));
 
@@ -69,14 +72,13 @@ export default function RecipeReviewCard(props) {
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-        <IconButton color="default" href={props.ghHref}>
+        <IconButton className={classes.buttons} href={props.ghHref}>
           <GitHubIcon />
         </IconButton>
-        <IconButton color="default" href={props.liveHref}>
+        <IconButton className={classes.buttons} href={props.liveHref}>
           <LanguageIcon />
         </IconButton>
         <IconButton
-          color="default"
           className={clsx(classes.expand, {
             [classes.expandOpen]: expanded,
           })}
@@ -84,7 +86,7 @@ export default function RecipeReviewCard(props) {
           aria-expanded={expanded}
           aria-label="show more button"
         >
-          <ExpandMoreIcon />
+          <ExpandMoreIcon className={classes.buttons} />
         </IconButton>
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>

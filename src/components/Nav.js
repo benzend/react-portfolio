@@ -1,35 +1,19 @@
 import React from "react";
 import clsx from "clsx";
-import { makeStyles, useTheme } from "@material-ui/core/styles";
-import Drawer from "@material-ui/core/Drawer";
+import { makeStyles } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
-import List from "@material-ui/core/List";
 import Typography from "@material-ui/core/Typography";
-import Divider from "@material-ui/core/Divider";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
-import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
-import ChevronRightIcon from "@material-ui/icons/ChevronRight";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
-import ListItemText from "@material-ui/core/ListItemText";
-import HomeIcon from "@material-ui/icons/Home";
-import WorkIcon from "@material-ui/icons/Work";
-import InfoIcon from "@material-ui/icons/Info";
-import ImportContactsIcon from "@material-ui/icons/ImportContacts";
-import BuildIcon from "@material-ui/icons/Build";
+
 import useScrollTrigger from "@material-ui/core/useScrollTrigger";
 import Fab from "@material-ui/core/Fab";
 import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
 import Zoom from "@material-ui/core/Zoom";
-import { Link } from "react-router-dom";
 
-const linkStyle = {
-  textDecoration: "none",
-  color: "#444",
-};
+import { DrawerContainer } from "./nav/nav-components/DrawerContainer";
 
 const drawerWidth = 240;
 
@@ -90,6 +74,10 @@ const useStyles = makeStyles((theme) => ({
     }),
     marginLeft: 0,
   },
+  linkStyle: {
+    textDecoration: "none",
+    color: "#444",
+  },
 }));
 
 const useStyles2 = makeStyles((theme) => ({
@@ -133,15 +121,10 @@ function ScrollTop(props) {
 export const Nav = (props) => {
   const classes = useStyles();
 
-  const theme = useTheme();
   const [open, setOpen] = React.useState(false);
 
   const handleDrawerOpen = () => {
     setOpen(true);
-  };
-
-  const handleDrawerClose = () => {
-    setOpen(false);
   };
 
   return (
@@ -172,67 +155,7 @@ export const Nav = (props) => {
       </AppBar>
 
       <Toolbar id="back-to-top-anchor" />
-      <Drawer
-        className={classes.drawer}
-        variant="persistent"
-        anchor="left"
-        open={open}
-        classes={{
-          paper: classes.drawerPaper,
-        }}
-      >
-        <div className={classes.drawerHeader}>
-          <IconButton color="primary" onClick={handleDrawerClose}>
-            {theme.direction === "ltr" ? (
-              <ChevronLeftIcon />
-            ) : (
-              <ChevronRightIcon />
-            )}
-          </IconButton>
-        </div>
-        <Divider />
-        <List>
-          <Link style={linkStyle} to="/">
-            <ListItem color="primary" button key="Home">
-              <ListItemIcon>
-                <HomeIcon color="primary" />
-              </ListItemIcon>
-              <ListItemText primary="Home" />
-            </ListItem>
-          </Link>
-          <Link style={linkStyle} to="/projects">
-            <ListItem button key="Projects">
-              <ListItemIcon>
-                <WorkIcon color="primary" />
-              </ListItemIcon>
-              <ListItemText primary="Projects" />
-            </ListItem>
-          </Link>
-          <Link style={linkStyle} to="/about">
-            <ListItem button key="About">
-              <ListItemIcon>
-                <InfoIcon color="primary" />
-              </ListItemIcon>
-              <ListItemText primary="About" />
-            </ListItem>
-          </Link>
-        </List>
-        <Divider />
-        <List>
-          <ListItem button key="Blog">
-            <ListItemIcon>
-              <ImportContactsIcon color="primary" />
-            </ListItemIcon>
-            <ListItemText primary="Blog" />
-          </ListItem>
-          <ListItem button key="Services">
-            <ListItemIcon>
-              <BuildIcon color="primary" />
-            </ListItemIcon>
-            <ListItemText primary="Services" />
-          </ListItem>
-        </List>
-      </Drawer>
+      <DrawerContainer open={open} setOpen={setOpen} classes={classes} />
       <main
         className={clsx(classes.content, {
           [classes.contentShift]: open,

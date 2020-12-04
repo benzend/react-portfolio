@@ -2,11 +2,10 @@ import { GitHub, Twitter, LinkedIn } from "@material-ui/icons";
 import { Typography, Link, Grid, Box, makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles({
-  textWhite: {
-    color: "white",
-    transition: "all .2s ease",
+  links: {
+    transition: "color .3s ease",
     "&:hover": {
-      color: "#87ffff",
+      color: "#fff",
     },
   },
   container: {
@@ -17,7 +16,7 @@ const useStyles = makeStyles({
 export const Footer = () => {
   const classes = useStyles();
   return (
-    <Box className={classes.container} bgcolor="#f98b00">
+    <Box className={classes.container}>
       <Grid
         justify="center"
         alignItems="center"
@@ -27,7 +26,7 @@ export const Footer = () => {
       >
         <Grid item>
           <Typography>
-            <Link className={classes.textWhite} href="http://madeunlinked.com">
+            <Link className={classes.links} href="http://madeunlinked.com">
               @madeunlinked
             </Link>
           </Typography>
@@ -35,7 +34,7 @@ export const Footer = () => {
         <Grid item>
           <Typography>
             <Link
-              className={classes.textWhite}
+              className={classes.links}
               rel="noreferrer"
               href="https://twitter.com/TheBenzend"
               target="_blank"
@@ -47,7 +46,7 @@ export const Footer = () => {
         <Grid item>
           <Typography>
             <Link
-              className={classes.textWhite}
+              className={classes.links}
               rel="noreferrer"
               href="https://github.com/benzend"
               target="_blank"
@@ -59,7 +58,7 @@ export const Footer = () => {
         <Grid item>
           <Typography>
             <Link
-              className={classes.textWhite}
+              className={classes.links}
               rel="noreferrer"
               href="https://www.linkedin.com/in/benjamin-scott-62a3741b1/"
               target="_blank"
