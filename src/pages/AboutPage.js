@@ -72,10 +72,10 @@ export const AboutPage = () => {
               I am currently placing my time into React.js and its corresponding
               MERN stack. I do have some familiarity (however my current focus
               is frontend) with Node.js, express and mongoose building REST
-              API's. With React, I have a month worth of time building various
+              API's. With React, I have 2 months worth of time building various
               applications and my current main project is a language learning
               Application applying react-router-dom, styled-components and other
-              React packages.
+              NPM packages.
             </Typography>
           </CardContent>
         </Card>
@@ -89,7 +89,7 @@ export const AboutPage = () => {
               Developer who has helped guide me into becoming an effective
               developer, training me on best practices, effective coding
               techniques like prefering immutability, and how to expertly work
-              with React.js. I have collaborated on projects with friends and
+              with React.js.
             </Typography>
             <Typography className={classes.p} variant="body1" component="p">
               I have collaborated on projects with friends and have been
@@ -110,7 +110,8 @@ export const AboutPage = () => {
               Net Ninja, Free Code Camp, Tony Alicia, Chris Sean, Programming
               with Mosh and others that have created web development content. I
               have also learned from Udemy courses and from the Head First
-              series.
+              series. LOTS of my learning comes from the actual experience (and
+              Google).
             </Typography>
           </CardContent>
         </Card>
