@@ -1,6 +1,6 @@
-import { Nav } from "../components/Nav";
 import Projects from "../components/projectsPage__components/Projects";
 import Typography from "@material-ui/core/Typography";
+import { Nav } from "../components/Nav";
 import { Footer } from "../components/Footer";
 
 import styled from "styled-components";

@@ -72,10 +72,18 @@ export default function RecipeReviewCard(props) {
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-        <IconButton className={classes.buttons} href={props.ghHref}>
+        <IconButton
+          className={classes.buttons}
+          href={props.ghHref}
+          target="_blank"
+        >
           <GitHubIcon />
         </IconButton>
-        <IconButton className={classes.buttons} href={props.liveHref}>
+        <IconButton
+          className={classes.buttons}
+          href={props.liveHref}
+          target="_blank"
+        >
           <LanguageIcon />
         </IconButton>
         <IconButton

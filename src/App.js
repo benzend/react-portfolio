@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import "fontsource-roboto";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { AboutPage } from "./components/AboutPage";
-import { ProjectsPage } from "./components/ProjectsPage";
-import { HomePage } from "./components/HomePage";
+import { AboutPage } from "./pages/AboutPage";
+import { ProjectsPage } from "./pages/ProjectsPage";
+import { HomePage } from "./pages/HomePage";
 
 function App() {
   return (
@@ -12,6 +12,7 @@ function App() {
       <video autoPlay muted loop id="myVideo">
         <source src="./videos/inkvideo.mp4" type="video/mp4" />
       </video>
+
       <Router>
         <Switch>
           <Route exact path="/" component={HomePage} />
