@@ -17,6 +17,47 @@ function Projects() {
       <Grid justify="center" container>
         <Grid className={classes.gridItem} item>
           <Project
+            headerTitle="React API App"
+            headerSubheader="A React Application"
+            imgUrl="./images/react-api.png"
+            imgTitle="An Image of my React API Handler"
+            miniDescription="A react app that handles an api that pulls random people and their info."
+            ghHref="https://github.com/benzend/react-api-handler"
+            liveHref="https://serene-kirch-b5fcfb.netlify.app/"
+            fullDescription="This app handles each person that is pulled into the frontend. Each person can be organized 
+            into a folder of your choice AND you can create/delete/edit folders as you please. This project uses lots of state
+            and destructuring."
+          />
+        </Grid>
+        <Grid className={classes.gridItem} item>
+          <Project
+            headerTitle="Todo App"
+            headerSubheader="A React Application"
+            imgUrl="./images/todo-list.png"
+            imgTitle="An Image of my todo application"
+            miniDescription="A react app that makes, edits, organized and deletes list items."
+            ghHref="https://github.com/benzend/todo-application"
+            liveHref="https://quizzical-edison-93c715.netlify.app/"
+            fullDescription="A simple todo app created from scratch. I worked on making sure there were no bugs and practiced destructuring and making code clean."
+          />
+        </Grid>
+        <Grid className={classes.gridItem} item>
+          <Project
+            headerTitle="Pomodoro Timer"
+            headerSubheader="A vanilla JavaScript Application"
+            imgUrl="./images/thumbnails/PomodoroTimer-thumbnail.png"
+            imgTitle="An Image of a Pomodoro Timer"
+            miniDescription="A type of timer that is used for efficient time management."
+            ghHref="https://github.com/benzend/pomodoro-timer"
+            liveHref="https://benzend.github.io/pomodoro-timer/"
+            fullDescription="I built this in a challenge against someone else to see who could have the 
+            best design/functionality in a day. Learned a lot about JavaScript and using 
+            numbers in it; converting seconds to minutes to hours and stuff like that. I also
+            implemented a background changer just for the hell of it."
+          />
+        </Grid>
+        <Grid className={classes.gridItem} item>
+          <Project
             headerTitle="Tic-Tac-Toe"
             headerSubheader="A vanilla JavaScript Application"
             imgUrl="./images/thumbnails/TicTacToe-example-thumbnail.png"
@@ -28,7 +69,7 @@ function Projects() {
             fullDescription="This project helped engrain JavaScript fundamentals into my head, while letting me know
             where I was at with JS. The bot you play against is not
             smart so winning against it is easy.  The biggest thing I learned here
-            was about using lots of checks and rewriting so much so much code. I left 
+            was about using lots of functions that check and make sure you can only do something when you're supposed to. I left 
             the old code in there, just commented out in case someone wants to look at it."
           />
         </Grid>
@@ -105,21 +146,6 @@ function Projects() {
             liveHref="https://benzend.github.io/creative-portfolio/"
             fullDescription=" A pretty cool Portfolio I made, stockpiled with animations and oddities that
             really has an fun look to it. "
-          />
-        </Grid>
-        <Grid className={classes.gridItem} item>
-          <Project
-            headerTitle="Pomodoro Timer"
-            headerSubheader="A vanilla JavaScript Application"
-            imgUrl="./images/thumbnails/PomodoroTimer-thumbnail.png"
-            imgTitle="An Image of a Pomodoro Timer"
-            miniDescription="A type of timer that is used for efficient time management."
-            ghHref="https://github.com/benzend/pomodoro-timer"
-            liveHref="https://benzend.github.io/pomodoro-timer/"
-            fullDescription="I built this in a challenge against someone else to see who could have the 
-            best design/functionality in a day. Learned a lot about JavaScript and using 
-            numbers in it; converting seconds to minutes to hours and stuff like that. I also
-            implemented a background changer just for the hell of it."
           />
         </Grid>
       </Grid>
