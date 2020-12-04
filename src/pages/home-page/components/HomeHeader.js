@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function HomeHeader() {
+export const HomeHeader = () => {
   const classes = useStyles();
   return (
     <header className={classes.header}>
@@ -43,6 +43,4 @@ function HomeHeader() {
       </Box>
     </header>
   );
-}
-
-export default HomeHeader;
+};

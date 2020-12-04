@@ -1,10 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./App.css";
 import "fontsource-roboto";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { AboutPage } from "./pages/AboutPage";
-import { ProjectsPage } from "./pages/ProjectsPage";
-import { HomePage } from "./pages/HomePage";
+import { AboutPage, ProjectsPage, HomePage } from "./pages";
 
 function App() {
   return (

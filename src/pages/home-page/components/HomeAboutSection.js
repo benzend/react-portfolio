@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function HomeAboutSection({ media900 }) {
+export const HomeAboutSection = ({ media900 }) => {
   const classes = useStyles();
   return (
     <section className={media900 ? classes.root900 : classes.root}>
@@ -49,4 +49,4 @@ export default function HomeAboutSection({ media900 }) {
       </Box>
     </section>
   );
-}
+};

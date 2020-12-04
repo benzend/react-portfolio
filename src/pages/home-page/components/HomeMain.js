@@ -1,6 +1,8 @@
-import HomeContactSection from "./HomeContactSection";
-import HomeProjectsSection from "./HomeProjectsSection";
-import HomeAboutSection from "./HomeAboutSection";
+import {
+  HomeContactSection,
+  HomeProjectsSection,
+  HomeAboutSection,
+} from "./index";
 
 import styled from "styled-components";
 
@@ -18,7 +20,7 @@ const StyledMain = styled.main`
   }
 `;
 
-function HomeMain() {
+export const HomeMain = () => {
   return (
     <StyledMain className="main">
       <HomeProjectsSection />
@@ -26,6 +28,4 @@ function HomeMain() {
       <HomeContactSection />
     </StyledMain>
   );
-}
-
-export default HomeMain;
+};

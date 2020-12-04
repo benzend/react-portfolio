@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function HomeContactSection() {
+export const HomeProjectsSection = () => {
   const classes = useStyles();
   const media800 = useMediaQuery("(min-width: 800px)");
 
@@ -103,4 +103,4 @@ export default function HomeContactSection() {
       </Box>
     </section>
   );
-}
+};
