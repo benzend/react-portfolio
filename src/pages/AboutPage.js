@@ -38,27 +38,31 @@ export const AboutPage = () => {
         <Card className={classes.card}>
           <CardContent>
             <Typography className={classes.heading} variant="h5" component="h3">
-              Overview
+              Who I Am
+            </Typography>
+
+            <Typography className={classes.p} variant="body1" component="p">
+              I am an extremely hard worker. My ultimate goal is to get things
+              done efficiently and with close attention to the details. I want
+              the best out of my work and I will grind day and night in order to
+              achieve those results.
+            </Typography>
+          </CardContent>
+        </Card>
+        <Card className={classes.card}>
+          <CardContent>
+            <Typography className={classes.heading} variant="h5" component="h3">
+              Development
             </Typography>
 
             <Typography className={classes.p} variant="body1" component="p">
               Starting with HTML, CSS and JavaScript, I have been constantly
               using and studying these languages for the past 5-6 months,
-              learning from all sorts of material like FreeCodeCamp, YouTube,
-              Udemy Courses and Memo. I've gained enough experience from
-              building roughly 20 projects (my own projects, not from tutorials)
-              to where I'm highly skilled and proficient with them. I can build
-              projects from the ground up with ease, whether it be with React or
-              vanilla JS.
-            </Typography>
-
-            <Typography className={classes.p} variant="body1" component="p">
-              <Typography className={classes.underline} component="span">
-                As a disclaimer
-              </Typography>
-              : I do leave some time for weekends with friends, taking my dog
-              for walks and eating, and sometimes there are days where I don't
-              put in the time but they are however rare.
+              learning from all sorts of material like FreeCodeCamp, YouTube and
+              Udemy courses. I've gained enough experience from building 20
+              projects (my own projects, not from tutorials) to where I'm highly
+              skilled and proficient with using them. I can build projects from
+              the ground up with ease, whether it be with React or vanilla JS.
             </Typography>
           </CardContent>
         </Card>
@@ -70,12 +74,11 @@ export const AboutPage = () => {
 
             <Typography className={classes.p} variant="body1" component="p">
               I am currently placing my time into React.js and its corresponding
-              MERN stack. I do have some familiarity (however my current focus
-              is frontend) with Node.js, express and mongoose building REST
-              API's. With React, I have 2 months worth of time building various
-              applications and my current main project is a language learning
-              Application applying react-router-dom, styled-components and other
-              NPM packages.
+              MERN stack. So, I do have familiarity with Node.js, Express,
+              Mongoose, MongoDB, Firebase and CodePen building REST API's.I have
+              2 months worth of time building various applications and the tech
+              that I tend to integrate with it are MaterialUI and
+              react-router-dom.
             </Typography>
           </CardContent>
         </Card>
@@ -94,7 +97,8 @@ export const AboutPage = () => {
             <Typography className={classes.p} variant="body1" component="p">
               I have collaborated on projects with friends and have been
               persistently building all sorts of projects, whether it be
-              websites, games or applications.
+              websites, games or applications. I am constantly working on my
+              skills every single day, treating this as a full time job.
             </Typography>
           </CardContent>
         </Card>
@@ -111,7 +115,7 @@ export const AboutPage = () => {
               with Mosh and others that have created web development content. I
               have also learned from Udemy courses and from the Head First
               series. LOTS of my learning comes from the actual experience (and
-              Google).
+              Google). And some of it comes from working with other developers.
             </Typography>
           </CardContent>
         </Card>
