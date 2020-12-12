@@ -1,5 +1,4 @@
 import { Box, Typography, makeStyles, Grid } from "@material-ui/core";
-import { useState } from "react";
 import { Project } from "./Project";
 
 const useStyles = makeStyles((theme) => ({
@@ -13,13 +12,13 @@ const useStyles = makeStyles((theme) => ({
   },
   img: {
     // borderRadius: "10px",
-    boxShadow: "0 2px 7px #0006",
   },
   imgContainer: {
     // backgroundColor: "green",
     borderRadius: "10px",
     position: "relative",
     overflow: "hidden",
+    boxShadow: "0 2px 7px #0006",
   },
   imgOverlay: {
     position: "absolute",
@@ -29,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     justifyContent: "space-between",
     alignItems: "center",
-    backgroundColor: "orange",
+    backgroundColor: "#653FFFdd",
     height: "100%",
     width: "100%",
     zIndex: 2,
@@ -41,16 +40,16 @@ const useStyles = makeStyles((theme) => ({
   },
   imgTitle: {
     textAlign: "center",
+    color: "#fff",
     fontWeight: 800,
     fontSize: "1.2rem",
   },
   techStyle: {
     fontWeight: 800,
     textAlign: "center",
-    backgroundColor: "#c77800",
     width: "fit-content",
-    color: "#fffd",
     margin: "auto",
+    color: "#fff",
     padding: "5px 10px",
     borderRadius: "10px",
   },
@@ -59,7 +58,10 @@ const useStyles = makeStyles((theme) => ({
     color: "red",
   },
   btnsContainer: {
-    padding: "10px",
+    margin: "10px",
+    borderRadius: "8%",
+    backgroundColor: "#653FFF",
+    boxShadow: "0 2px 10px #0004",
   },
 }));
 
@@ -94,6 +96,7 @@ export const HomeProjectsSection = () => {
           projBtnsStyle={projBtns}
           btnsContainer={btnsContainer}
           gitHubUrl=""
+          liveUrl=""
         />
         <Project
           img={img}
@@ -106,6 +109,8 @@ export const HomeProjectsSection = () => {
           tech="JavaScript"
           projBtnsStyle={projBtns}
           btnsContainer={btnsContainer}
+          gitHubUrl=""
+          liveUrl=""
         />
         <Project
           img={img}
@@ -118,6 +123,8 @@ export const HomeProjectsSection = () => {
           tech="JQuery"
           projBtnsStyle={projBtns}
           btnsContainer={btnsContainer}
+          gitHubUrl=""
+          liveUrl=""
         />
       </Grid>
     </Box>

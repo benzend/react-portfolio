@@ -4,12 +4,12 @@ import "./index.css";
 import { App } from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core";
-import { orange } from "@material-ui/core/colors";
+import { purple } from "@material-ui/core/colors";
 
 const theme = createMuiTheme({
   palette: {
     primary: {
-      main: orange[500],
+      main: purple[500],
     },
     secondary: {
       main: "#fff",
