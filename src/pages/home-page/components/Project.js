@@ -12,6 +12,8 @@ export const Project = ({
   imgSource,
   tech,
   techStyle,
+  projBtns,
+  btnsContainer,
 }) => {
   const [hovering, setHovering] = useState(false);
 
@@ -25,11 +27,11 @@ export const Project = ({
         <Box className={hovering ? imgOverlay + " active" : imgOverlay}>
           <p className={imgTitleStyle}>{imgTitle}</p>
           <p className={techStyle}>{tech}</p>
-          <Box>
-            <IconButton>
+          <Box className={btnsContainer}>
+            <IconButton color="secondary">
               <GitHub />
             </IconButton>
-            <IconButton>
+            <IconButton color="secondary">
               <Language />
             </IconButton>
           </Box>

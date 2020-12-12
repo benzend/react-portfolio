@@ -8,6 +8,8 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     textAlign: "center",
     height: "100vh",
+    background:
+      "url('https://images.pexels.com/photos/4004374/pexels-photo-4004374.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260') no-repeat center center/cover",
     // [theme.breakpoints.up("md")]: {},
   },
   title: {
@@ -15,8 +17,10 @@ const useStyles = makeStyles((theme) => ({
     // fontWeight: "800",
     // [theme.breakpoints.up("md")]: {
     // },
+    color: "white",
   },
   subtitle: {
+    color: "white",
     // fontSize: "2.6rem",
     // [theme.breakpoints.up("md")]: {
     // },

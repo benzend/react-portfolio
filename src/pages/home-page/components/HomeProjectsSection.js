@@ -54,7 +54,13 @@ const useStyles = makeStyles((theme) => ({
     padding: "5px 10px",
     borderRadius: "10px",
   },
-  projBtns: {},
+  projBtns: {
+    backgroundColor: "green",
+    color: "red",
+  },
+  btnsContainer: {
+    padding: "10px",
+  },
 }));
 
 export const HomeProjectsSection = () => {
@@ -67,6 +73,7 @@ export const HomeProjectsSection = () => {
     imgTitle,
     techStyle,
     projBtns,
+    btnsContainer,
   } = useStyles();
 
   return (
@@ -85,6 +92,8 @@ export const HomeProjectsSection = () => {
           techStyle={techStyle}
           tech="React"
           projBtnsStyle={projBtns}
+          btnsContainer={btnsContainer}
+          gitHubUrl=""
         />
         <Project
           img={img}
@@ -95,6 +104,8 @@ export const HomeProjectsSection = () => {
           imgTitle="Tic Tac Toe"
           techStyle={techStyle}
           tech="JavaScript"
+          projBtnsStyle={projBtns}
+          btnsContainer={btnsContainer}
         />
         <Project
           img={img}
@@ -105,6 +116,8 @@ export const HomeProjectsSection = () => {
           imgTitle="Accounting Website"
           techStyle={techStyle}
           tech="JQuery"
+          projBtnsStyle={projBtns}
+          btnsContainer={btnsContainer}
         />
       </Grid>
     </Box>

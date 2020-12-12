@@ -12,7 +12,7 @@ const theme = createMuiTheme({
       main: orange[500],
     },
     secondary: {
-      main: "#80deea",
+      main: "#fff",
     },
   },
 });
