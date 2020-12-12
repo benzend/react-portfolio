@@ -32,11 +32,6 @@ export const HomeHeader = () => {
   const classes = useStyles();
   return (
     <header className={classes.header}>
-      <img
-        className={classes.img}
-        src="https://img.icons8.com/bubbles/256/000000/user-male.png"
-        alt="Cartoonized profile"
-      />
       <Box className={classes.headerTxt}>
         <HomeHeaderTitle />
         <HomeHeaderSubtitle />
