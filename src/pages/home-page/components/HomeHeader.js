@@ -7,23 +7,19 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     alignItems: "center",
     textAlign: "center",
-    [theme.breakpoints.up("md")]: {
-      marginTop: "80px",
-      height: "60vh",
-    },
+    height: "100vh",
+    // [theme.breakpoints.up("md")]: {},
   },
   title: {
-    // textShadow: "3px 3px 5px #0009",
-    [theme.breakpoints.up("md")]: {
-      fontSize: "3.8rem",
-      fontWeight: "800",
-    },
+    fontSize: "3.8rem",
+    fontWeight: "800",
+    // [theme.breakpoints.up("md")]: {
+    // },
   },
   subtitle: {
-    // textShadow: "3px 3px 5px #0009",
-    [theme.breakpoints.up("md")]: {
-      fontSize: "1.8rem",
-    },
+    fontSize: "1.8rem",
+    // [theme.breakpoints.up("md")]: {
+    // },
   },
 }));
 
