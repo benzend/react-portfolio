@@ -1,22 +1,25 @@
-import Typography from "@material-ui/core/Typography";
-import styled from "styled-components";
+import { Box, Typography } from "@material-ui/core";
 
-const StyledDiv = styled.div`
-  text-shadow: 3px 3px 5px #0009;
-  @media (min-width: 900px) {
-    h1 {
-      font-size: 3.2rem;
-    }
-  }
-`;
-
-function HomeHeaderTitle() {
+function HomeHeaderTitle({ headerTxt, subtitle }) {
   return (
-    <StyledDiv className="header__title">
-      <Typography color="primary" component="h1" variant="h4">
+    <Box>
+      <Typography
+        className={headerTxt}
+        color="primary"
+        component="h1"
+        variant="h4"
+      >
         Benjamin Scott
       </Typography>
-    </StyledDiv>
+      <Typography
+        className={subtitle}
+        color="primary"
+        component="h2"
+        variant="h5"
+      >
+        Frontend Web Developer
+      </Typography>
+    </Box>
   );
 }
 

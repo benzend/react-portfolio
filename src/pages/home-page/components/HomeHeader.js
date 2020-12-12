@@ -1,32 +1,37 @@
 import HomeHeaderTitle from "./HomeHeaderTitle";
-import HomeHeaderSubtitle from "./HomeHeaderSubtitle";
 import { Box, makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   header: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
     textAlign: "center",
     [theme.breakpoints.up("md")]: {
       marginTop: "80px",
       height: "60vh",
     },
   },
-  headerTxt: {
-    //   [theme.breakpoints.up("md")]: {
-    //     marginLeft: "10%",
-    //     position: "relative",
-    //     top: "-28%",
-    //   },
+  title: {
+    // textShadow: "3px 3px 5px #0009",
+    [theme.breakpoints.up("md")]: {
+      fontSize: "3.8rem",
+      fontWeight: "800",
+    },
+  },
+  subtitle: {
+    // textShadow: "3px 3px 5px #0009",
+    [theme.breakpoints.up("md")]: {
+      fontSize: "1.8rem",
+    },
   },
 }));
 
 export const HomeHeader = () => {
   const classes = useStyles();
   return (
-    <header className={classes.header}>
-      <Box className={classes.headerTxt}>
-        <HomeHeaderTitle />
-        <HomeHeaderSubtitle />
-      </Box>
-    </header>
+    <Box className={classes.header} component="header">
+      <HomeHeaderTitle headerTxt={classes.title} subtitle={classes.subtitle} />
+    </Box>
   );
 };
