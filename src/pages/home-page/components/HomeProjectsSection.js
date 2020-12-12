@@ -79,7 +79,7 @@ export const HomeProjectsSection = () => {
   } = useStyles();
 
   return (
-    <Box className={root}>
+    <Box id="projects" className={root}>
       <Typography className={title} variant="h3" component="h3">
         Projects
       </Typography>

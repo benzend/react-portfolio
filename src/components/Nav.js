@@ -24,12 +24,12 @@ export const Nav = () => {
   const { root, links } = useStyles();
   return (
     <Box className={root} component="nav">
-      <Link className={links} to="#projects">
+      <a className={links} href="#projects">
         Projects
-      </Link>
-      <Link className={links} to="#contact">
+      </a>
+      <a className={links} href="#contact">
         Get In Touch
-      </Link>
+      </a>
       <Link className={links} to="/about">
         About
       </Link>
