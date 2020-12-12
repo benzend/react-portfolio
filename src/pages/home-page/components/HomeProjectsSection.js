@@ -45,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "1.2rem",
   },
   techStyle: {
-    fontWeight: 800,
+    fontWeight: 600,
     textAlign: "center",
     width: "fit-content",
     margin: "auto",
@@ -92,7 +92,7 @@ export const HomeProjectsSection = () => {
           imgTitleStyle={imgTitle}
           imgTitle="Language Learning App"
           techStyle={techStyle}
-          tech="React"
+          tech=">>React<<"
           projBtnsStyle={projBtns}
           btnsContainer={btnsContainer}
           gitHubUrl=""
@@ -106,7 +106,7 @@ export const HomeProjectsSection = () => {
           imgTitleStyle={imgTitle}
           imgTitle="Tic Tac Toe"
           techStyle={techStyle}
-          tech="JavaScript"
+          tech=">>JavaScript<<"
           projBtnsStyle={projBtns}
           btnsContainer={btnsContainer}
           gitHubUrl=""
@@ -120,7 +120,77 @@ export const HomeProjectsSection = () => {
           imgTitleStyle={imgTitle}
           imgTitle="Accounting Website"
           techStyle={techStyle}
-          tech="JQuery"
+          tech=">>JQuery<<"
+          projBtnsStyle={projBtns}
+          btnsContainer={btnsContainer}
+          gitHubUrl=""
+          liveUrl=""
+        />
+        <Project
+          img={img}
+          imgSource="./images/thumbnails/react-api-thumbnail.png"
+          imgContainer={imgContainer}
+          imgOverlay={imgOverlay}
+          imgTitleStyle={imgTitle}
+          imgTitle="Person API"
+          techStyle={techStyle}
+          tech=">>React<<"
+          projBtnsStyle={projBtns}
+          btnsContainer={btnsContainer}
+          gitHubUrl=""
+          liveUrl=""
+        />
+        <Project
+          img={img}
+          imgSource="./images/thumbnails/todo-list-thumbnail.png"
+          imgContainer={imgContainer}
+          imgOverlay={imgOverlay}
+          imgTitleStyle={imgTitle}
+          imgTitle="To-do List"
+          techStyle={techStyle}
+          tech=">>React<<"
+          projBtnsStyle={projBtns}
+          btnsContainer={btnsContainer}
+          gitHubUrl=""
+          liveUrl=""
+        />
+        <Project
+          img={img}
+          imgSource="./images/thumbnails/PomodoroTimer-thumbnail.png"
+          imgContainer={imgContainer}
+          imgOverlay={imgOverlay}
+          imgTitleStyle={imgTitle}
+          imgTitle="Pomodoro Timer"
+          techStyle={techStyle}
+          tech=">>JavaScript<<"
+          projBtnsStyle={projBtns}
+          btnsContainer={btnsContainer}
+          gitHubUrl=""
+          liveUrl=""
+        />
+        <Project
+          img={img}
+          imgSource="./images/thumbnails/JumpStart-example-thumbnail.png"
+          imgContainer={imgContainer}
+          imgOverlay={imgOverlay}
+          imgTitleStyle={imgTitle}
+          imgTitle="JumpStart Website"
+          techStyle={techStyle}
+          tech=">>JavaScript<<"
+          projBtnsStyle={projBtns}
+          btnsContainer={btnsContainer}
+          gitHubUrl=""
+          liveUrl=""
+        />
+        <Project
+          img={img}
+          imgSource="./images/thumbnails/Mini-RPG-Game-example-thumbnail.png"
+          imgContainer={imgContainer}
+          imgOverlay={imgOverlay}
+          imgTitleStyle={imgTitle}
+          imgTitle="Mini Game"
+          techStyle={techStyle}
+          tech=">>JavaScript<<"
           projBtnsStyle={projBtns}
           btnsContainer={btnsContainer}
           gitHubUrl=""
