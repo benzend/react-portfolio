@@ -11,13 +11,13 @@ const useStyles = makeStyles((theme) => ({
     // [theme.breakpoints.up("md")]: {},
   },
   title: {
-    fontSize: "3.8rem",
-    fontWeight: "800",
+    // fontSize: "5rem",
+    // fontWeight: "800",
     // [theme.breakpoints.up("md")]: {
     // },
   },
   subtitle: {
-    fontSize: "1.8rem",
+    // fontSize: "2.6rem",
     // [theme.breakpoints.up("md")]: {
     // },
   },

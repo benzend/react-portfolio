@@ -28,7 +28,7 @@ export const HomeAboutSection = ({ media900 }) => {
   return (
     <section className={media900 ? classes.root900 : classes.root}>
       <Box textAlign="center" padding="10px 0 30px">
-        <Typography color="primary" variant="h5" component="h3">
+        <Typography variant="h3" component="h3">
           About
         </Typography>
       </Box>

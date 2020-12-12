@@ -71,7 +71,7 @@ export const HomeContactSection = () => {
   return (
     <section className={classes.root}>
       <Box textAlign="center">
-        <Typography color="primary" variant="h5" component="h3">
+        <Typography variant="h3" component="h3">
           Contact Me
         </Typography>
       </Box>

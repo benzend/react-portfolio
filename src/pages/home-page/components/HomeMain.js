@@ -4,17 +4,7 @@ import {
   HomeAboutSection,
 } from "./index";
 
-import { makeStyles, Container } from "@material-ui/core";
-
-// const useStyles = makeStyles({
-//   root: {
-//     maxWidth: '1000px',
-//     margin: 'auto',
-//   },
-//   button: {
-
-//   }
-// })
+import { Container } from "@material-ui/core";
 
 export const HomeMain = () => {
   return (

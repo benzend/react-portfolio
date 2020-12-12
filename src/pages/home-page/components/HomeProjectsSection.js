@@ -33,7 +33,7 @@ export const HomeProjectsSection = () => {
   return (
     <section className={classes.root}>
       <Box textAlign="center" padding="10px 0 30px">
-        <Typography color="primary" variant="h5" component="h3">
+        <Typography variant="h3" component="h3">
           Projects
         </Typography>
       </Box>
