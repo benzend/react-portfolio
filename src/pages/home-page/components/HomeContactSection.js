@@ -37,7 +37,6 @@ const useStyles = makeStyles((theme) => ({
   form: {
     padding: "10px 30px",
     borderRadius: "15px",
-    // color: "#f98b00",
     width: "100%",
     [theme.breakpoints.up("md")]: {
       flex: 1,
