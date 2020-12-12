@@ -95,8 +95,8 @@ export const HomeProjectsSection = () => {
           tech=">>React<<"
           projBtnsStyle={projBtns}
           btnsContainer={btnsContainer}
-          gitHubUrl=""
-          liveUrl=""
+          gitHubUrl="https://github.com/benzend/language-learning-app"
+          liveUrl="https://thirsty-wright-d1d04e.netlify.app/"
         />
         <Project
           img={img}
@@ -109,8 +109,8 @@ export const HomeProjectsSection = () => {
           tech=">>JavaScript<<"
           projBtnsStyle={projBtns}
           btnsContainer={btnsContainer}
-          gitHubUrl=""
-          liveUrl=""
+          gitHubUrl="https://github.com/benzend/tic-tac-toe"
+          liveUrl="https://benzend.github.io/tic-tac-toe/"
         />
         <Project
           img={img}
@@ -123,8 +123,8 @@ export const HomeProjectsSection = () => {
           tech=">>JQuery<<"
           projBtnsStyle={projBtns}
           btnsContainer={btnsContainer}
-          gitHubUrl=""
-          liveUrl=""
+          gitHubUrl="https://github.com/benzend/accounting-website"
+          liveUrl="https://benzend.github.io/accounting-website/"
         />
         <Project
           img={img}
@@ -137,8 +137,8 @@ export const HomeProjectsSection = () => {
           tech=">>React<<"
           projBtnsStyle={projBtns}
           btnsContainer={btnsContainer}
-          gitHubUrl=""
-          liveUrl=""
+          gitHubUrl="https://github.com/benzend/react-api-handler"
+          liveUrl="https://serene-kirch-b5fcfb.netlify.app/"
         />
         <Project
           img={img}
@@ -151,8 +151,8 @@ export const HomeProjectsSection = () => {
           tech=">>React<<"
           projBtnsStyle={projBtns}
           btnsContainer={btnsContainer}
-          gitHubUrl=""
-          liveUrl=""
+          gitHubUrl="https://github.com/benzend/todo-application"
+          liveUrl="https://quizzical-edison-93c715.netlify.app/"
         />
         <Project
           img={img}
@@ -165,8 +165,8 @@ export const HomeProjectsSection = () => {
           tech=">>JavaScript<<"
           projBtnsStyle={projBtns}
           btnsContainer={btnsContainer}
-          gitHubUrl=""
-          liveUrl=""
+          gitHubUrl="https://github.com/benzend/pomodoro-timer"
+          liveUrl="https://benzend.github.io/pomodoro-timer/"
         />
         <Project
           img={img}
@@ -179,8 +179,8 @@ export const HomeProjectsSection = () => {
           tech=">>JavaScript<<"
           projBtnsStyle={projBtns}
           btnsContainer={btnsContainer}
-          gitHubUrl=""
-          liveUrl=""
+          gitHubUrl="https://github.com/benzend/jumpstart-website"
+          liveUrl="https://benzend.github.io/jumpstart-website/"
         />
         <Project
           img={img}
@@ -193,8 +193,22 @@ export const HomeProjectsSection = () => {
           tech=">>JavaScript<<"
           projBtnsStyle={projBtns}
           btnsContainer={btnsContainer}
-          gitHubUrl=""
-          liveUrl=""
+          gitHubUrl="https://github.com/benzend/small-rpg-game"
+          liveUrl="https://benzend.github.io/small-rpg-game/"
+        />
+        <Project
+          img={img}
+          imgSource="./images/thumbnails/Portfolio-thumbnail.png"
+          imgContainer={imgContainer}
+          imgOverlay={imgOverlay}
+          imgTitleStyle={imgTitle}
+          imgTitle="An Old Portfolio"
+          techStyle={techStyle}
+          tech=">>JavaScript<<"
+          projBtnsStyle={projBtns}
+          btnsContainer={btnsContainer}
+          gitHubUrl="https://github.com/benzend/creative-portfolio"
+          liveUrl="https://benzend.github.io/creative-portfolio/"
         />
       </Grid>
     </Box>
