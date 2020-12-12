@@ -12,11 +12,12 @@ const useStyles = makeStyles({
   links: {
     transition: "color .3s ease",
     "&:hover": {
-      color: "#fff",
+      color: "#7250fd",
     },
   },
   container: {
     padding: "15px",
+    marginTop: "6rem",
   },
 });
 

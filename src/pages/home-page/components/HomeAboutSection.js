@@ -39,7 +39,7 @@ export const HomeAboutSection = ({ media900 }) => {
           variant="body1"
         >
           As a passionate developer, my goals are to keep progressing in all
-          areas of web development. From frontend to back, my skills will keep
+          areas of web development. From front-end to back, my skills will keep
           moving forward by building and learning everything that I can.
         </Typography>
         <br />
