@@ -133,7 +133,7 @@ export const HomeContactSection = () => {
           </FormControl>
 
           <Box marginTop="20px">
-            <Button color="secondary" type="submit">
+            <Button color="primary" type="submit">
               Submit
             </Button>
           </Box>

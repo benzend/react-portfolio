@@ -45,7 +45,7 @@ export const HomeAboutSection = ({ media900 }) => {
         <br />
         <div className="btn-container">
           <Link to="about">
-            <Button className={classes.btn} color="secondary">
+            <Button className={classes.btn} color="primary">
               Read More
             </Button>
           </Link>

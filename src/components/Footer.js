@@ -1,5 +1,12 @@
 import { GitHub, Twitter, LinkedIn } from "@material-ui/icons";
-import { Typography, Link, Grid, Box, makeStyles } from "@material-ui/core";
+import {
+  Typography,
+  Link,
+  Grid,
+  Box,
+  makeStyles,
+  IconButton,
+} from "@material-ui/core";
 
 const useStyles = makeStyles({
   links: {
@@ -39,7 +46,9 @@ export const Footer = () => {
               href="https://twitter.com/TheBenzend"
               target="_blank"
             >
-              <Twitter />
+              <IconButton color="primary">
+                <Twitter />
+              </IconButton>
             </Link>
           </Typography>
         </Grid>
@@ -51,7 +60,9 @@ export const Footer = () => {
               href="https://github.com/benzend"
               target="_blank"
             >
-              <GitHub />
+              <IconButton color="primary">
+                <GitHub />
+              </IconButton>
             </Link>
           </Typography>
         </Grid>
@@ -63,7 +74,9 @@ export const Footer = () => {
               href="https://www.linkedin.com/in/benjamin-scott-62a3741b1/"
               target="_blank"
             >
-              <LinkedIn />
+              <IconButton color="primary">
+                <LinkedIn />
+              </IconButton>
             </Link>
           </Typography>
         </Grid>
