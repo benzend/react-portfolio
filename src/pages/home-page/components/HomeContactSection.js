@@ -35,10 +35,9 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "4%",
   },
   form: {
-    backgroundColor: "#f98b0055",
     padding: "10px 30px",
     borderRadius: "15px",
-    color: "#f98b00",
+    // color: "#f98b00",
     width: "100%",
     [theme.breakpoints.up("md")]: {
       flex: 1,
@@ -89,9 +88,7 @@ export const HomeContactSection = () => {
           <input type="hidden" name="form-name" value="contact" />
 
           <FormControl>
-            <InputLabel className={classes.txtOrange} htmlFor="name">
-              Name
-            </InputLabel>
+            <InputLabel htmlFor="name">Name</InputLabel>
             <Input
               id="name"
               name="name"
@@ -102,9 +99,7 @@ export const HomeContactSection = () => {
           </FormControl>
           <br />
           <FormControl>
-            <InputLabel className={classes.txtOrange} htmlFor="email">
-              Email
-            </InputLabel>
+            <InputLabel htmlFor="email">Email</InputLabel>
             <Input
               id="email"
               name="email"
@@ -115,16 +110,14 @@ export const HomeContactSection = () => {
           </FormControl>
           <br />
           <FormControl>
-            <InputLabel className={classes.txtOrange} htmlFor="tel">
-              Phone Number
-            </InputLabel>
+            <InputLabel htmlFor="tel">Phone Number</InputLabel>
             <Input
               id="tel"
               name="tel"
               type="tel"
               aria-describedby="An input for your phone number"
             />
-            <FormHelperText className={classes.txtOrange} id="my-helper-text">
+            <FormHelperText id="my-helper-text">
               (Your phone number isn't required)
             </FormHelperText>
           </FormControl>
