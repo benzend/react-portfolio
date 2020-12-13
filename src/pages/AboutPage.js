@@ -13,7 +13,6 @@ const useStyles = makeStyles({
   card: {
     maxWidth: "700px",
     margin: "3rem auto",
-    backgroundColor: "#ff9800",
     borderRadius: "2rem",
   },
   heading: {

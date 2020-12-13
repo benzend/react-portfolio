@@ -26,6 +26,7 @@ const useStyles = makeStyles({
     "&:hover": {
       color: "#000",
       backgroundColor: "#fffa",
+      boxShadow: "0 3px 20px #000c",
     },
     "&.active": {
       top: 0,

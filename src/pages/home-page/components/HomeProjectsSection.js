@@ -100,34 +100,6 @@ export const HomeProjectsSection = () => {
         />
         <Project
           img={img}
-          imgSource="./images/thumbnails/TicTacToe-example-thumbnail.png"
-          imgContainer={imgContainer}
-          imgOverlay={imgOverlay}
-          imgTitleStyle={imgTitle}
-          imgTitle="Tic Tac Toe"
-          techStyle={techStyle}
-          tech=">>JavaScript<<"
-          projBtnsStyle={projBtns}
-          btnsContainer={btnsContainer}
-          gitHubUrl="https://github.com/benzend/tic-tac-toe"
-          liveUrl="https://benzend.github.io/tic-tac-toe/"
-        />
-        <Project
-          img={img}
-          imgSource="./images/thumbnails/Accounting-Website-example-thumbnail.png"
-          imgContainer={imgContainer}
-          imgOverlay={imgOverlay}
-          imgTitleStyle={imgTitle}
-          imgTitle="Accounting Website"
-          techStyle={techStyle}
-          tech=">>JQuery<<"
-          projBtnsStyle={projBtns}
-          btnsContainer={btnsContainer}
-          gitHubUrl="https://github.com/benzend/accounting-website"
-          liveUrl="https://benzend.github.io/accounting-website/"
-        />
-        <Project
-          img={img}
           imgSource="./images/thumbnails/react-api-thumbnail.png"
           imgContainer={imgContainer}
           imgOverlay={imgOverlay}
@@ -154,6 +126,35 @@ export const HomeProjectsSection = () => {
           gitHubUrl="https://github.com/benzend/todo-application"
           liveUrl="https://quizzical-edison-93c715.netlify.app/"
         />
+        <Project
+          img={img}
+          imgSource="./images/thumbnails/TicTacToe-example-thumbnail.png"
+          imgContainer={imgContainer}
+          imgOverlay={imgOverlay}
+          imgTitleStyle={imgTitle}
+          imgTitle="Tic Tac Toe"
+          techStyle={techStyle}
+          tech=">>JavaScript<<"
+          projBtnsStyle={projBtns}
+          btnsContainer={btnsContainer}
+          gitHubUrl="https://github.com/benzend/tic-tac-toe"
+          liveUrl="https://benzend.github.io/tic-tac-toe/"
+        />
+        <Project
+          img={img}
+          imgSource="./images/thumbnails/Accounting-Website-example-thumbnail.png"
+          imgContainer={imgContainer}
+          imgOverlay={imgOverlay}
+          imgTitleStyle={imgTitle}
+          imgTitle="Accounting Website"
+          techStyle={techStyle}
+          tech=">>JQuery<<"
+          projBtnsStyle={projBtns}
+          btnsContainer={btnsContainer}
+          gitHubUrl="https://github.com/benzend/accounting-website"
+          liveUrl="https://benzend.github.io/accounting-website/"
+        />
+
         <Project
           img={img}
           imgSource="./images/thumbnails/PomodoroTimer-thumbnail.png"
