@@ -21,10 +21,11 @@ const useStyles = makeStyles({
     color: "#fff",
     padding: "1rem 3vw",
     fontSize: "1.3rem",
-    transition: "top 2s ease",
+    transition: "top 2s ease, background .3s ease, color .3s ease",
+    borderRadius: "0 10px 10px 0",
     "&:hover": {
       color: "#000",
-      backgroundColor: "#fff",
+      backgroundColor: "#fffa",
     },
     "&.active": {
       top: 0,
