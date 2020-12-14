@@ -14,6 +14,8 @@ export const Project = ({
   techStyle,
   projBtns,
   btnsContainer,
+  gitHubUrl,
+  liveUrl,
 }) => {
   const [hovering, setHovering] = useState(false);
 
@@ -28,10 +30,10 @@ export const Project = ({
           <p className={imgTitleStyle}>{imgTitle}</p>
           <p className={techStyle}>{tech}</p>
           <Box className={btnsContainer}>
-            <IconButton color="secondary">
+            <IconButton href={gitHubUrl} target="_blank" color="secondary">
               <GitHub />
             </IconButton>
-            <IconButton color="secondary">
+            <IconButton href={liveUrl} target="_blank" color="secondary">
               <Language />
             </IconButton>
           </Box>
