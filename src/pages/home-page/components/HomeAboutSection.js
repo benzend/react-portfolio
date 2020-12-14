@@ -1,4 +1,10 @@
-import { Box, Button, Typography, makeStyles } from "@material-ui/core";
+import {
+  Box,
+  Button,
+  Typography,
+  makeStyles,
+  Container,
+} from "@material-ui/core";
 
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
@@ -18,14 +24,20 @@ const useStyles = makeStyles((theme) => ({
       transform: "translateY(0)",
       opacity: 1,
     },
+    [theme.breakpoints.down("xs")]: {
+      fontSize: "1.8rem",
+    },
   },
-  text: {
-    [theme.breakpoints.up("lg")]: {
-      fontSize: "1.2rem",
+  textContainer: {
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "1rem",
     },
     transform: "translateX(40px)",
     opacity: 0,
     transition: "all 1s ease",
+    maxWidth: "800px",
+    textAlign: "center",
+    margin: "auto",
     "&.active": {
       transform: "translateX(0)",
       opacity: 1,
@@ -40,6 +52,11 @@ const useStyles = makeStyles((theme) => ({
       transform: "translateY(0)",
       opacity: 1,
     },
+  },
+  btnContainer: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
   },
 }));
 
@@ -56,27 +73,29 @@ export const HomeAboutSection = ({ yoffset }) => {
           About
         </Typography>
       </Box>
-      <Box textAlign="center" margin="0 3rem">
-        <Typography
-          className={yoffset > 1060 ? "active " + classes.text : classes.text}
-          color="textPrimary"
-          variant="body1"
-        >
+      <Box
+        className={
+          yoffset > 1060
+            ? "active " + classes.textContainer
+            : classes.textContainer
+        }
+      >
+        <Typography color="textPrimary" variant="body1">
           As a passionate developer, my goals are to keep progressing in all
           areas of web development. From front-end to back, my skills will keep
           moving forward by building and learning everything that I can.
         </Typography>
-        <br />
-        <div className="btn-container">
-          <Link to="about">
-            <Button
-              className={yoffset > 1070 ? "active " + classes.btn : classes.btn}
-              color="primary"
-            >
-              Read More
-            </Button>
-          </Link>
-        </div>
+      </Box>
+      <br />
+      <Box className={classes.btnContainer}>
+        <Link to="about">
+          <Button
+            className={yoffset > 1070 ? "active " + classes.btn : classes.btn}
+            color="primary"
+          >
+            Read More
+          </Button>
+        </Link>
       </Box>
     </section>
   );

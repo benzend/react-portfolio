@@ -7,7 +7,7 @@ import {
   HomeAboutSection,
 } from "./index";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   root: {
     position: "relative",
     backgroundColor: "#fff2e644",
@@ -18,8 +18,11 @@ const useStyles = makeStyles({
   },
   container: {
     maxWidth: "90vw",
+    [theme.breakpoints.down("sm")]: {
+      maxWidth: "100%",
+    },
   },
-});
+}));
 
 export const HomeMain = () => {
   const { root, container } = useStyles();

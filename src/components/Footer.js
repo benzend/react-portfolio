@@ -8,7 +8,7 @@ import {
   IconButton,
 } from "@material-ui/core";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   links: {
     transition: "color .3s ease",
     "&:hover": {
@@ -17,9 +17,12 @@ const useStyles = makeStyles({
   },
   container: {
     padding: "15px",
-    marginTop: "6rem",
+    marginTop: "3rem",
+    [theme.breakpoints.down("sm")]: {
+      marginTop: "0",
+    },
   },
-});
+}));
 
 export const Footer = () => {
   const classes = useStyles();

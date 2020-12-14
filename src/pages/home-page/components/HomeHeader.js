@@ -10,20 +10,19 @@ const useStyles = makeStyles((theme) => ({
     height: "100vh",
     background:
       "url('https://images.pexels.com/photos/4004374/pexels-photo-4004374.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260') no-repeat center center/cover",
-    // [theme.breakpoints.up("md")]: {},
+    [theme.breakpoints.down("md")]: {},
   },
   title: {
-    // fontSize: "5rem",
-    // fontWeight: "800",
-    // [theme.breakpoints.up("md")]: {
-    // },
     color: "white",
+    [theme.breakpoints.down("xs")]: {
+      fontSize: "3rem",
+    },
   },
   subtitle: {
     color: "white",
-    // fontSize: "2.6rem",
-    // [theme.breakpoints.up("md")]: {
-    // },
+    [theme.breakpoints.down("xs")]: {
+      fontSize: "1.3rem",
+    },
   },
 }));
 

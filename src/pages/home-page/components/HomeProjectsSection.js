@@ -25,6 +25,9 @@ const useStyles = makeStyles((theme) => ({
       transform: "translateY(0)",
       opacity: 1,
     },
+    [theme.breakpoints.down("xs")]: {
+      fontSize: "1.8rem",
+    },
   },
   img: {
     // borderRadius: "10px",
