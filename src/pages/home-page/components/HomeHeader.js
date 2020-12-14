@@ -48,7 +48,7 @@ export const HomeHeader = () => {
   const [active, setActive] = useState(false);
 
   useEffect(() => {
-    setActive(!active);
+    setActive((c) => !c);
   }, []);
 
   return (
