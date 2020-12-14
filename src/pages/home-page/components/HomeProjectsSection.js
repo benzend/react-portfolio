@@ -6,9 +6,25 @@ const useStyles = makeStyles((theme) => ({
     margin: " 8% 0",
     [theme.breakpoints.up("md")]: {},
   },
+  projectsContainer: {
+    transform: "translateX(40px)",
+    opacity: 0,
+    transition: "all 1s ease",
+    "&.active": {
+      transform: "translateX(0)",
+      opacity: 1,
+    },
+  },
   title: {
     textAlign: "center",
     marginBottom: "2rem",
+    transform: "translateY(-50px)",
+    opacity: 0,
+    transition: "all 1s ease",
+    "&.active": {
+      transform: "translateY(0)",
+      opacity: 1,
+    },
   },
   img: {
     // borderRadius: "10px",
@@ -65,9 +81,10 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export const HomeProjectsSection = () => {
+export const HomeProjectsSection = ({ yoffset }) => {
   const {
     root,
+    projectsContainer,
     title,
     img,
     imgContainer,
@@ -80,10 +97,22 @@ export const HomeProjectsSection = () => {
 
   return (
     <Box id="projects" className={root}>
-      <Typography className={title} variant="h3" component="h3">
+      <Typography
+        className={yoffset > 300 ? "active " + title : title}
+        variant="h3"
+        component="h3"
+      >
         Projects
       </Typography>
-      <Grid spacing={5} justify="center" direction="row" container>
+      <Grid
+        className={
+          yoffset > 300 ? "active " + projectsContainer : projectsContainer
+        }
+        spacing={5}
+        justify="center"
+        direction="row"
+        container
+      >
         <Project
           img={img}
           imgSource="./images/thumbnails/languageApp-thumbnail.png"

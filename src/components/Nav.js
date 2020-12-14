@@ -57,12 +57,15 @@ export const Nav = () => {
     setTimeout(() => {
       setAnimated(anim);
     }, 600);
-  } else if (animated[0] && animated[1] && animated[2]) {
+  } else if (animated[0] && animated[1] && animated[2] && !animated[3]) {
     const anim = [...animated];
     anim[3] = true;
+    console.log("hey");
     setTimeout(() => {
       setAnimated(anim);
     }, 600);
+  } else if (animated[0] && animated[1] && animated[2] && animated[3]) {
+    // do nothing
   }
 
   return (

@@ -17,6 +17,15 @@ const useStyles = makeStyles((theme) => ({
     padding: "6%",
     margin: "8% 0",
   },
+  title: {
+    transform: "translateY(-50px)",
+    opacity: 0,
+    transition: "all 1s ease",
+    "&.active": {
+      transform: "translateY(0)",
+      opacity: 1,
+    },
+  },
   textArea: {
     marginTop: "6%",
     fontFamily:
@@ -25,14 +34,20 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: "5px",
     padding: "4px",
   },
-  formBox: {},
-  formBox900: {
+  formBox: {
     display: "flex",
     flexDirection: "row-reverse",
     justifyContent: "center",
     alignItems: "center",
     borderRadius: "20px",
     marginTop: "4%",
+    transform: "translateX(40px)",
+    opacity: 0,
+    transition: "all 1s ease",
+    "&.active": {
+      transform: "translateX(0)",
+      opacity: 1,
+    },
   },
   form: {
     padding: "10px 30px",
@@ -63,17 +78,26 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export const HomeContactSection = () => {
+export const HomeContactSection = ({ yoffset }) => {
   const classes = useStyles();
   const media900 = useMediaQuery("(min-width: 900px");
   return (
     <section id="contact" className={classes.root}>
       <Box textAlign="center">
-        <Typography variant="h3" component="h3">
+        <Typography
+          className={yoffset > 1500 ? "active " + classes.title : classes.title}
+          variant="h3"
+          component="h3"
+        >
           Contact Me
         </Typography>
       </Box>
-      <Box className={classes.formBox900} textAlign="center">
+      <Box
+        className={
+          yoffset > 1500 ? "active " + classes.formBox : classes.formBox
+        }
+        textAlign="center"
+      >
         {media900 ? (
           <div className={classes.imgContainer}>
             <img

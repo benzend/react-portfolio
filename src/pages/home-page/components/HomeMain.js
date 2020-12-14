@@ -1,29 +1,47 @@
+import { useState, useEffect } from "react";
+import { Container, Card, makeStyles } from "@material-ui/core";
+
 import {
   HomeContactSection,
   HomeProjectsSection,
   HomeAboutSection,
 } from "./index";
 
-import { Container, Card, makeStyles } from "@material-ui/core";
-
 const useStyles = makeStyles({
   root: {
+    position: "relative",
     backgroundColor: "#fff2e644",
     boxShadow: "0 20px 60px #0008",
     borderRadius: "20px",
     marginTop: "5rem",
+    transition: "transform .1s ease",
+  },
+  container: {
+    maxWidth: "90vw",
   },
 });
 
 export const HomeMain = () => {
-  const { root } = useStyles();
+  const { root, container } = useStyles();
+  const [yoffset, setYoffset] = useState();
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      console.log(window.pageYOffset);
+      setYoffset(window.pageYOffset);
+    });
+  }, []);
+
   return (
-    <Container maxWidth="95vw">
-      <Card className={root}>
+    <Container className={container}>
+      <Card
+        style={{ transform: `translateY(-${yoffset / 15}px)` }}
+        className={root}
+      >
         <Container>
-          <HomeProjectsSection />
-          <HomeAboutSection />
-          <HomeContactSection />
+          <HomeProjectsSection yoffset={yoffset} />
+          <HomeAboutSection yoffset={yoffset} />
+          <HomeContactSection yoffset={yoffset} />
         </Container>
       </Card>
     </Container>
