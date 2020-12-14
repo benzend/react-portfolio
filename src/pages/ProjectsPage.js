@@ -1,6 +1,5 @@
 import Projects from "./projects-page/components/Projects";
 import Typography from "@material-ui/core/Typography";
-import { Nav } from "../components/Nav";
 import { Footer } from "../components/Footer";
 
 import styled from "styled-components";
@@ -24,7 +23,6 @@ export const ProjectsPage = () => {
   const { projects } = useStyles();
   return (
     <>
-      <Nav />
       <Typography
         color="primary"
         className="center"

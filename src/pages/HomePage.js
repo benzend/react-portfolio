@@ -1,5 +1,4 @@
-import { HomeHeader, HomeMain } from "./home-page/components";
-import { Nav } from "../components/Nav";
+import { HomeHeader, HomeMain, HomeNav } from "./home-page/components";
 import { Footer } from "../components/Footer";
 
 // don't forget layout component
@@ -7,7 +6,7 @@ import { Footer } from "../components/Footer";
 export const HomePage = () => {
   return (
     <div>
-      <Nav />
+      <HomeNav />
       <HomeHeader />
       <HomeMain />
       <Footer />

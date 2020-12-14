@@ -1,4 +1,3 @@
-import { Nav } from "../components/Nav";
 import { Footer } from "../components/Footer";
 
 import {
@@ -32,7 +31,6 @@ export const AboutPage = () => {
   const classes = useStyles();
   return (
     <>
-      <Nav />
       <Container>
         <Card className={classes.card}>
           <CardContent>

@@ -36,11 +36,16 @@ const useStyles = makeStyles((theme) => ({
       top: 0,
       left: 0,
       color: "white",
-      width: "100px",
-      height: "100px",
+      width: "50px",
+      height: "50px",
+      margin: "10px",
       fontSize: "3rem",
       zIndex: 20,
     },
+  },
+  actualHam: {
+    backgroundColor: "#0008",
+    borderRadius: "10px",
   },
   links: {
     position: "relative",
@@ -62,8 +67,8 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export const Nav = () => {
-  const { root, links, hamburger } = useStyles();
+export const HomeNav = () => {
+  const { root, links, hamburger, actualHam } = useStyles();
 
   const [animated, setAnimated] = useState([]);
 
@@ -101,7 +106,7 @@ export const Nav = () => {
   return (
     <>
       <IconButton onClick={() => setNavOpen(!navOpen)} className={hamburger}>
-        <MenuOpen fontSize="inherit" />
+        <MenuOpen className={actualHam} fontSize="inherit" />
       </IconButton>
       <Box className={navOpen ? "open " + root : root} component="nav">
         <a className={animated[0] ? links + " active" : links} href="#projects">
