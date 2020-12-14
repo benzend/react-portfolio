@@ -59,6 +59,12 @@ const useStyles = makeStyles((theme) => ({
     transition: "height .8s ease",
     "&.open": {
       height: "500px",
+      [theme.breakpoints.down("md")]: {
+        height: "900px",
+      },
+      [theme.breakpoints.down("sm")]: {
+        height: "1200px",
+      },
     },
   },
 }));
