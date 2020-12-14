@@ -1,8 +1,9 @@
-import { Box, makeStyles } from "@material-ui/core";
+import { Box, IconButton, makeStyles } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { MenuOpen } from "@material-ui/icons";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   root: {
     position: "absolute",
     top: 0,
@@ -13,6 +14,33 @@ const useStyles = makeStyles({
     alignItems: "flex-start",
     height: "100vh",
     width: "40vw",
+    zIndex: 10,
+    [theme.breakpoints.down("md")]: {
+      position: "fixed",
+      backgroundColor: "black",
+      top: 0,
+      left: 0,
+      width: "300px",
+      transform: "translateX(-100%)",
+      transition: "transform 1s ease",
+      "&.open": {
+        transform: "translateX(0)",
+      },
+    },
+  },
+  hamburger: {
+    display: "none",
+    [theme.breakpoints.down("md")]: {
+      display: "block",
+      position: "fixed",
+      top: 0,
+      left: 0,
+      color: "white",
+      width: "100px",
+      height: "100px",
+      fontSize: "3rem",
+      zIndex: 20,
+    },
   },
   links: {
     position: "relative",
@@ -32,12 +60,14 @@ const useStyles = makeStyles({
       top: 0,
     },
   },
-});
+}));
 
 export const Nav = () => {
-  const { root, links } = useStyles();
+  const { root, links, hamburger } = useStyles();
 
   const [animated, setAnimated] = useState([]);
+
+  const [navOpen, setNavOpen] = useState(false);
 
   useEffect(() => {
     const anim = [...animated];
@@ -69,19 +99,24 @@ export const Nav = () => {
   }
 
   return (
-    <Box className={root} component="nav">
-      <a className={animated[0] ? links + " active" : links} href="#projects">
-        Projects
-      </a>
-      <a className={animated[1] ? links + " active" : links} href="#contact">
-        Get In Touch
-      </a>
-      <Link className={animated[2] ? links + " active" : links} to="/about">
-        About
-      </Link>
-      <Link className={animated[3] ? links + " active" : links} to="/blog">
-        Blog
-      </Link>
-    </Box>
+    <>
+      <IconButton onClick={() => setNavOpen(!navOpen)} className={hamburger}>
+        <MenuOpen fontSize="inherit" />
+      </IconButton>
+      <Box className={navOpen ? "open " + root : root} component="nav">
+        <a className={animated[0] ? links + " active" : links} href="#projects">
+          Projects
+        </a>
+        <a className={animated[1] ? links + " active" : links} href="#contact">
+          Get In Touch
+        </a>
+        <Link className={animated[2] ? links + " active" : links} to="/about">
+          About
+        </Link>
+        <Link className={animated[3] ? links + " active" : links} to="/blog">
+          Blog
+        </Link>
+      </Box>
+    </>
   );
 };
