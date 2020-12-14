@@ -1,5 +1,4 @@
 import { Box, IconButton, makeStyles } from "@material-ui/core";
-import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { MenuOpen } from "@material-ui/icons";
 
@@ -17,7 +16,9 @@ const useStyles = makeStyles((theme) => ({
     zIndex: 10,
     [theme.breakpoints.down("md")]: {
       position: "fixed",
-      backgroundColor: "black",
+      backgroundColor: "#0008",
+      justifyContent: "flex-start",
+      paddingTop: "5rem",
       top: 0,
       left: 0,
       width: "300px",
@@ -56,6 +57,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "1.3rem",
     transition: "top 2s ease, background .3s ease, color .3s ease",
     borderRadius: "0 10px 10px 0",
+    margin: "2rem 0",
     "&:hover": {
       color: "#000",
       backgroundColor: "#fffa",
