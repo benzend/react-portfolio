@@ -119,6 +119,7 @@ export const HomeProjectsSection = ({ yoffset }) => {
         <Project
           img={img}
           imgSource="./images/thumbnails/languageApp-thumbnail.png"
+          imgAlt="a website with a matching game"
           imgContainer={imgContainer}
           imgOverlay={imgOverlay}
           imgTitleStyle={imgTitle}
@@ -133,6 +134,7 @@ export const HomeProjectsSection = ({ yoffset }) => {
         <Project
           img={img}
           imgSource="./images/thumbnails/react-api-thumbnail.png"
+          imgAlt="an app with people and cards and a folder editor"
           imgContainer={imgContainer}
           imgOverlay={imgOverlay}
           imgTitleStyle={imgTitle}
@@ -147,6 +149,7 @@ export const HomeProjectsSection = ({ yoffset }) => {
         <Project
           img={img}
           imgSource="./images/thumbnails/todo-list-thumbnail.png"
+          imgAlt="a todo list"
           imgContainer={imgContainer}
           imgOverlay={imgOverlay}
           imgTitleStyle={imgTitle}
@@ -161,6 +164,7 @@ export const HomeProjectsSection = ({ yoffset }) => {
         <Project
           img={img}
           imgSource="./images/thumbnails/TicTacToe-example-thumbnail.png"
+          imgAlt="tic-tac-toe project example"
           imgContainer={imgContainer}
           imgOverlay={imgOverlay}
           imgTitleStyle={imgTitle}
@@ -175,6 +179,7 @@ export const HomeProjectsSection = ({ yoffset }) => {
         <Project
           img={img}
           imgSource="./images/thumbnails/Accounting-Website-example-thumbnail.png"
+          imgAlt="a website design for accountants"
           imgContainer={imgContainer}
           imgOverlay={imgOverlay}
           imgTitleStyle={imgTitle}
@@ -190,6 +195,7 @@ export const HomeProjectsSection = ({ yoffset }) => {
         <Project
           img={img}
           imgSource="./images/thumbnails/PomodoroTimer-thumbnail.png"
+          imgAlt="a pomodoro timer with background and buttons"
           imgContainer={imgContainer}
           imgOverlay={imgOverlay}
           imgTitleStyle={imgTitle}
@@ -204,6 +210,7 @@ export const HomeProjectsSection = ({ yoffset }) => {
         <Project
           img={img}
           imgSource="./images/thumbnails/JumpStart-example-thumbnail.png"
+          imgAlt="a website labeled jumpstart with design"
           imgContainer={imgContainer}
           imgOverlay={imgOverlay}
           imgTitleStyle={imgTitle}
@@ -218,6 +225,7 @@ export const HomeProjectsSection = ({ yoffset }) => {
         <Project
           img={img}
           imgSource="./images/thumbnails/Mini-RPG-Game-example-thumbnail.png"
+          imgAlt="there are CUBES EVERYWHERE"
           imgContainer={imgContainer}
           imgOverlay={imgOverlay}
           imgTitleStyle={imgTitle}
@@ -232,6 +240,7 @@ export const HomeProjectsSection = ({ yoffset }) => {
         <Project
           img={img}
           imgSource="./images/thumbnails/Portfolio-thumbnail.png"
+          imgAlt="Ben's other portfolio example"
           imgContainer={imgContainer}
           imgOverlay={imgOverlay}
           imgTitleStyle={imgTitle}

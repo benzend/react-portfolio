@@ -30,7 +30,6 @@ export const HomeMain = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      console.log(window.pageYOffset);
       setYoffset(window.pageYOffset);
     });
   }, []);

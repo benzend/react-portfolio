@@ -10,9 +10,9 @@ export const Project = ({
   img,
   imgTitle,
   imgSource,
+  imgAlt,
   tech,
   techStyle,
-  projBtns,
   btnsContainer,
   gitHubUrl,
   liveUrl,
@@ -38,7 +38,7 @@ export const Project = ({
             </IconButton>
           </Box>
         </Box>
-        <img className={img} src={imgSource} />
+        <img className={img} src={imgSource} alt={imgAlt} />
       </Box>
     </Grid>
   );

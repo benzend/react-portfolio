@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import "fontsource-roboto";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { AboutPage, ProjectsPage, HomePage } from "./pages";
+import { HomePage } from "./pages/HomePage";
 
 export const App = () => {
   return (
@@ -10,8 +10,6 @@ export const App = () => {
       <Router>
         <Switch>
           <Route exact path="/" component={HomePage} />
-          <Route path="/projects" component={ProjectsPage} />
-          <Route path="/about" component={AboutPage} />
         </Switch>
       </Router>
     </div>

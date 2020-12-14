@@ -75,7 +75,7 @@ export const HomeNav = () => {
   const [navOpen, setNavOpen] = useState(false);
 
   useEffect(() => {
-    const anim = [...animated];
+    const anim = [];
     anim[0] = true;
     setAnimated(anim);
   }, []);
@@ -95,7 +95,6 @@ export const HomeNav = () => {
   } else if (animated[0] && animated[1] && animated[2] && !animated[3]) {
     const anim = [...animated];
     anim[3] = true;
-    console.log("hey");
     setTimeout(() => {
       setAnimated(anim);
     }, 600);
