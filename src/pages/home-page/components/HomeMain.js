@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#fff2e644",
     boxShadow: "0 20px 60px #0008",
     borderRadius: "20px",
-    marginTop: "5rem",
+    marginTop: "10rem",
     transition: "transform .1s ease",
   },
   container: {
@@ -37,7 +37,7 @@ export const HomeMain = () => {
   return (
     <Container className={container}>
       <Card
-        style={{ transform: `translateY(-${yoffset / 15}px)` }}
+        style={{ transform: `translateY(-${yoffset / 7}px)` }}
         className={root}
       >
         <Container>

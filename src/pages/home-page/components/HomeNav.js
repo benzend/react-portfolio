@@ -79,7 +79,9 @@ export const HomeNav = () => {
   useEffect(() => {
     const anim = [];
     anim[0] = true;
-    setAnimated(anim);
+    setTimeout(() => {
+      setAnimated(anim);
+    }, 1000);
   }, []);
 
   if (animated[0] && !animated[1] && !animated[2]) {
@@ -87,13 +89,13 @@ export const HomeNav = () => {
     anim[1] = true;
     setTimeout(() => {
       setAnimated(anim);
-    }, 600);
+    }, 800);
   } else if (animated[0] && animated[1] && !animated[2]) {
     const anim = [...animated];
     anim[2] = true;
     setTimeout(() => {
       setAnimated(anim);
-    }, 600);
+    }, 800);
   } else if (animated[0] && animated[1] && animated[2]) {
     // do nothing
   }
