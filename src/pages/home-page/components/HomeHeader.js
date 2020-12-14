@@ -44,6 +44,7 @@ const useStyles = makeStyles((theme) => ({
 
 export const HomeHeader = () => {
   const { header, title, subtitle } = useStyles();
+
   const [active, setActive] = useState(false);
 
   useEffect(() => {

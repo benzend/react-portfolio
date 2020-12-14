@@ -25,6 +25,7 @@ const useStyles = makeStyles((theme) => ({
   textContainer: {
     [theme.breakpoints.down("sm")]: {
       fontSize: "1rem",
+      textAlign: "left",
     },
     transform: "translateX(40px)",
     opacity: 0,
