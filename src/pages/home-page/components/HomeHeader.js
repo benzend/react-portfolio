@@ -12,6 +12,7 @@ const useStyles = makeStyles((theme) => ({
     height: "100vh",
     background:
       "url('https://images.pexels.com/photos/4004374/pexels-photo-4004374.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260') no-repeat center center/cover",
+    transition: "translate .1s linear",
   },
   title: {
     textShadow: "0 2px 5px #000c",

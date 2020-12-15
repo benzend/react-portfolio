@@ -17,10 +17,7 @@ const useStyles = makeStyles((theme) => ({
   },
   container: {
     padding: "15px",
-    marginTop: "-8rem",
-    [theme.breakpoints.down("sm")]: {
-      marginTop: "-10rem",
-    },
+    marginTop: "2rem",
   },
 }));
 
