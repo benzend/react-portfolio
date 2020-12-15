@@ -107,9 +107,6 @@ export const HomeProjectsSection = ({ yoffset }) => {
       >
         Projects
       </Typography>
-
-      {/* secret about hook */}
-      <div id="about"></div>
       <Grid
         className={
           yoffset > 300 ? "active " + projectsContainer : projectsContainer

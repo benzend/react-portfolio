@@ -8,7 +8,6 @@ export const HomePage = () => {
     <div>
       <HomeNav />
       <HomeHeader />
-      <div id="projects"></div>
       <HomeMain />
       <Footer />
     </div>

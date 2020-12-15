@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Container, Card, makeStyles } from "@material-ui/core";
+import { Container, Card, makeStyles, useMediaQuery } from "@material-ui/core";
 
 import {
   HomeContactSection,
@@ -27,6 +27,7 @@ const useStyles = makeStyles((theme) => ({
 export const HomeMain = () => {
   const { root, container } = useStyles();
   const [yoffset, setYoffset] = useState();
+  const mobile = useMediaQuery("(max-width: 300px)");
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -42,8 +43,6 @@ export const HomeMain = () => {
       >
         <Container>
           <HomeProjectsSection yoffset={yoffset} />
-          {/* secrect contact hook */}
-          <div id="contact"></div>
           <HomeAboutSection yoffset={yoffset} />
           <HomeContactSection yoffset={yoffset} />
         </Container>
