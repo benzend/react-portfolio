@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import { Container, Card, makeStyles } from "@material-ui/core";
 
 import {
