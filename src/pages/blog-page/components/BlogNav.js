@@ -42,22 +42,14 @@ export const BlogNav = () => {
           </Typography>
         </Box>
         <Box className={links}>
-          <Link className={link} to="/blog">
+          <Link to="#" className={link}>
             Home
           </Link>
-          <Link className={link} to="/blog/react">
-            React
-          </Link>
-          <Link className={link} to="/blog/javascript">
-            JavaScript
-          </Link>
-          <Link className={link} to="/blog/html">
-            HTML
-          </Link>
-          <Link className={link} to="/blog/css">
-            CSS
-          </Link>
-          <Link className={link} to="/">
+          <div className={link}>React</div>
+          <div className={link}>JavaScript</div>
+          <div className={link}>HTML</div>
+          <div className={link}>CSS</div>
+          <Link to="/" className={link}>
             Portfolio
           </Link>
         </Box>
