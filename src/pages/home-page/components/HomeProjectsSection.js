@@ -99,7 +99,7 @@ export const HomeProjectsSection = ({ yoffset }) => {
   } = useStyles();
 
   return (
-    <Box id="projects" className={root}>
+    <Box className={root}>
       <Typography
         className={yoffset > 300 ? "active " + title : title}
         variant="h3"
@@ -107,6 +107,9 @@ export const HomeProjectsSection = ({ yoffset }) => {
       >
         Projects
       </Typography>
+
+      {/* secret about hook */}
+      <div id="about"></div>
       <Grid
         className={
           yoffset > 300 ? "active " + projectsContainer : projectsContainer

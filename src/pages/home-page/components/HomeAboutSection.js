@@ -75,7 +75,7 @@ export const HomeAboutSection = ({ yoffset }) => {
 
   const [opened, setOpened] = useState(false);
   return (
-    <Box id="about" className={classes.aboutSection}>
+    <Box className={classes.aboutSection}>
       <Box component="section" className={classes.root}>
         <Box textAlign="center" padding="10px 0 30px">
           <Typography

@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
     boxShadow: "0 20px 60px #0008",
     borderRadius: "20px",
     marginTop: "10rem",
-    transition: "transform .1s ease",
+    transition: "transform .1s linear",
   },
   container: {
     maxWidth: "90vw",
@@ -42,6 +42,8 @@ export const HomeMain = () => {
       >
         <Container>
           <HomeProjectsSection yoffset={yoffset} />
+          {/* secrect contact hook */}
+          <div id="contact"></div>
           <HomeAboutSection yoffset={yoffset} />
           <HomeContactSection yoffset={yoffset} />
         </Container>
