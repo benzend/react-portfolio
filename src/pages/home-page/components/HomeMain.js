@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Container, Card, makeStyles, useMediaQuery } from "@material-ui/core";
+import { Container, Card, makeStyles } from "@material-ui/core";
 
 import {
   HomeContactSection,
@@ -10,10 +10,10 @@ import {
 const useStyles = makeStyles((theme) => ({
   root: {
     position: "relative",
-    backgroundColor: "#fff2e644",
+    backgroundColor: "#fffefe",
     boxShadow: "0 20px 60px #0008",
     borderRadius: "20px",
-    marginTop: "10rem",
+    marginTop: "7rem",
     transition: "transform .1s linear",
   },
   container: {
@@ -24,23 +24,12 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export const HomeMain = () => {
+export const HomeMain = ({ yoffset }) => {
   const { root, container } = useStyles();
-  const [yoffset, setYoffset] = useState();
-  const mobile = useMediaQuery("(max-width: 300px)");
-
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      setYoffset(window.pageYOffset);
-    });
-  }, []);
 
   return (
     <Container className={container}>
-      <Card
-        style={{ transform: `translateY(-${yoffset / 7}px)` }}
-        className={root}
-      >
+      <Card className={root}>
         <Container>
           <HomeProjectsSection yoffset={yoffset} />
           <HomeAboutSection yoffset={yoffset} />

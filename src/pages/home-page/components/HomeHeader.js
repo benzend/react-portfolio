@@ -5,6 +5,7 @@ import { Box, makeStyles } from "@material-ui/core";
 const useStyles = makeStyles((theme) => ({
   header: {
     display: "flex",
+    position: "relative",
     justifyContent: "center",
     alignItems: "center",
     textAlign: "center",
@@ -42,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export const HomeHeader = () => {
+export const HomeHeader = ({ yoffset }) => {
   const { header, title, subtitle } = useStyles();
 
   const [active, setActive] = useState(false);
@@ -52,7 +53,11 @@ export const HomeHeader = () => {
   }, []);
 
   return (
-    <Box className={header} component="header">
+    <Box
+      style={{ transform: `translateY(${yoffset / 5}px)` }}
+      className={header}
+      component="header"
+    >
       <HomeHeaderTitle
         headerTxt={active ? "active " + title : title}
         subtitle={active ? "active " + subtitle : subtitle}

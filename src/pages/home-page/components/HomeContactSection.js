@@ -85,7 +85,7 @@ export const HomeContactSection = ({ yoffset }) => {
   const classes = useStyles();
   const media900 = useMediaQuery("(min-width: 900px");
   return (
-    <section className={classes.root}>
+    <section id="contact" className={classes.root}>
       <Box textAlign="center">
         <Typography
           className={yoffset > 1500 ? "active " + classes.title : classes.title}

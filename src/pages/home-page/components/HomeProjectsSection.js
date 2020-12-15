@@ -99,7 +99,7 @@ export const HomeProjectsSection = ({ yoffset }) => {
   } = useStyles();
 
   return (
-    <Box className={root}>
+    <Box id="projects" className={root}>
       <Typography
         className={yoffset > 300 ? "active " + title : title}
         variant="h3"
