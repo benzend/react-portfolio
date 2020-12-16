@@ -46,6 +46,7 @@ export const LinkMenu = ({ linkName, linkStyle, menuItems }) => {
         {linkName}
       </Button>
       <Popper
+        style={{ zIndex: 2 }}
         open={open}
         anchorEl={anchorRef.current}
         role={undefined}

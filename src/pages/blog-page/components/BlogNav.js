@@ -24,6 +24,7 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     zIndex: 20,
     background: "#653FFFdd",
+    transition: "height 1s ease",
     [theme.breakpoints.down("sm")]: {
       overFlow: "hidden",
       "&.open": {
@@ -39,6 +40,7 @@ const useStyles = makeStyles((theme) => ({
       right: "10px",
       top: "7px",
       color: "white",
+      transition: "transform 1s ease",
       "&.active": {
         transform: "translateY(200px) rotate(180deg)",
       },
@@ -56,10 +58,6 @@ const useStyles = makeStyles((theme) => ({
     width: "50%",
     [theme.breakpoints.down("sm")]: {
       flexDirection: "column",
-      display: "none",
-      "&.active": {
-        display: "flex",
-      },
     },
   },
   link: {
