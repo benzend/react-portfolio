@@ -4,7 +4,9 @@ import {
   Typography,
   makeStyles,
   Button,
+  IconButton,
 } from "@material-ui/core";
+import { Menu } from "@material-ui/icons";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -36,12 +38,31 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   contentContainer: {},
+  menuIconContainer: {
+    display: "none",
+    [theme.breakpoints.down("md")]: {
+      display: "box",
+      position: "fixed",
+      top: "80px",
+      right: "10px",
+    },
+  },
 }));
 
 export const BlogReactIntro = () => {
-  const { headerStyle, root, nav, contentBox, contentContainer } = useStyles();
+  const {
+    headerStyle,
+    root,
+    nav,
+    contentBox,
+    contentContainer,
+    menuIconContainer,
+  } = useStyles();
   return (
     <Box className={root}>
+      <IconButton className={menuIconContainer}>
+        <Menu />
+      </IconButton>
       <Box className={contentBox}>
         <Box className={headerStyle} component="header">
           <Typography
