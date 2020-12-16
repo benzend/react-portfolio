@@ -22,13 +22,18 @@ const useStyles = makeStyles((theme) => ({
     left: 0,
     height: "60px",
     width: "100%",
-    zIndex: 20,
+    zIndex: 5,
     background: "#653FFFdd",
     transition: "height 1s ease",
     [theme.breakpoints.down("sm")]: {
       overFlow: "hidden",
       "&.open": {
         height: "300px",
+        // change z-index on 'active' because when not
+        // active the menu button on a blog page is unclickable.
+        // set zIndex below menu btn before but when active
+        // zIndex is larger
+        zIndex: 10,
       },
     },
   },
@@ -40,6 +45,7 @@ const useStyles = makeStyles((theme) => ({
       right: "10px",
       top: "7px",
       color: "white",
+      zIndex: 4,
       transition: "transform 1s ease",
       "&.active": {
         transform: "translateY(200px) rotate(180deg)",
@@ -58,6 +64,11 @@ const useStyles = makeStyles((theme) => ({
     width: "50%",
     [theme.breakpoints.down("sm")]: {
       flexDirection: "column",
+      opacity: 0,
+      transition: "opacity 1s ease",
+      "&.active": {
+        opacity: 1,
+      },
     },
   },
   link: {

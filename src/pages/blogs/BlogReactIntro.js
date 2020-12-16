@@ -28,6 +28,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     justifyContent: "flex-start",
     background: "#f7f7f7",
+    zIndex: 8,
     [theme.breakpoints.down("md")]: {
       transform: "translateX(100%)",
       transition: "transform 1s ease",
