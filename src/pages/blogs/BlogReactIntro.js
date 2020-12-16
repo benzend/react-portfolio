@@ -17,7 +17,12 @@ const useStyles = makeStyles(() => ({
   },
   nav: {
     minWidth: "30%",
-    position: "sticky",
+    position: "fixed",
+    marginTop: "60px",
+    padding: "1rem 0",
+    height: "100vh",
+    right: 0,
+    top: 0,
     display: "flex",
     flexDirection: "column",
     justifyContent: "flex-start",
@@ -222,6 +227,11 @@ export const BlogReactIntro = () => {
               <span className="code-block--blue">/div</span>
               <span className="code-block--gray">{">"} </span>
             </code>
+            <br />
+            <code>
+              {"  "}
+              <span className="code-block--white">)</span>
+            </code>
           </pre>
           <Typography align="center" color="textPrimary" variant="body1">
             One of the best ways to know that you're working with JSX and not
@@ -271,6 +281,7 @@ export const BlogReactIntro = () => {
         <Button>What is React?</Button>
         <Button>React Structure</Button>
         <Button>ES6</Button>
+        <Button>JSX</Button>
       </Box>
     </Box>
   );

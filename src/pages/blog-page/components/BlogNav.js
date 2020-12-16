@@ -15,8 +15,11 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     alignItems: "center",
     position: "sticky",
+    top: 0,
+    left: 0,
     height: "60px",
     width: "100%",
+    zIndex: 20,
     background: "#653FFFdd",
   },
   container: {
