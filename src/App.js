@@ -3,7 +3,7 @@ import "./App.css";
 import "fontsource-roboto";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { HomePage } from "./pages/HomePage";
-import { BlogMainNavigation } from "./pages/BlogMainNavigation";
+import { Blog } from "./pages/Blog";
 
 export const App = () => {
   const [yoffset, setYoffset] = useState();
@@ -19,7 +19,7 @@ export const App = () => {
       <Router>
         <Switch>
           <Route exact path="/" render={() => <HomePage yoffset={yoffset} />} />
-          <Route path="/blog" component={BlogMainNavigation} />
+          <Route path="/blog" component={Blog} />
         </Switch>
       </Router>
     </div>

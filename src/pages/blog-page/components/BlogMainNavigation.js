@@ -1,7 +1,5 @@
 import { Typography, makeStyles, Box, Container } from "@material-ui/core";
 
-import { BlogNav } from "./blog-page/components/BlogNav";
-
 const useStyles = makeStyles(() => ({
   root: {},
   title: {},
@@ -17,8 +15,7 @@ const useStyles = makeStyles(() => ({
 export const BlogMainNavigation = () => {
   const { header } = useStyles();
   return (
-    <Box>
-      <BlogNav />
+    <>
       <Box className={header} component="header">
         <Typography color="textPrimary" component="h1" variant="h3">
           MadeUnlinked
@@ -32,6 +29,6 @@ export const BlogMainNavigation = () => {
           There isn't anything here yet.
         </Typography>
       </Container>
-    </Box>
+    </>
   );
 };

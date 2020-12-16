@@ -52,7 +52,7 @@ export const BlogNav = () => {
         </Box>
         <Box className={links}>
           <Button>
-            <Link to="#" className={link}>
+            <Link to="/blog" className={link}>
               Home
             </Link>
           </Button>
