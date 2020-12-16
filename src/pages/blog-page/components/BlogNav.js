@@ -58,23 +58,25 @@ export const BlogNav = () => {
           </Button>
           <LinkMenu
             linkName="React"
-            link={link}
-            menuItems={["Nothing here yet"]}
+            linkStyle={link}
+            menuItems={[
+              { title: "An Introduction to React", link: "/blog/react/intro" },
+            ]}
           />
           <LinkMenu
             linkName="JavaScript"
-            link={link}
-            menuItems={["Nothing here yet"]}
+            linkStyle={link}
+            menuItems={[{ title: "There is nothing here yet", link: "/blog" }]}
           />
           <LinkMenu
             linkName="HTML"
-            link={link}
-            menuItems={["Nothing here yet"]}
+            linkStyle={link}
+            menuItems={[{ title: "There is nothing here yet", link: "/blog" }]}
           />
           <LinkMenu
             linkName="CSS"
-            link={link}
-            menuItems={["Nothing here yet"]}
+            linkStyle={link}
+            menuItems={[{ title: "There is nothing here yet", link: "/blog" }]}
           />
           <Button className={link}>
             <Link to="/" className={link}>

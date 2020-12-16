@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from "react";
 import {
   Button,
   ClickAwayListener,
@@ -7,9 +8,9 @@ import {
   Paper,
   Popper,
 } from "@material-ui/core";
-import { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 
-export const LinkMenu = ({ linkName, link, menuItems }) => {
+export const LinkMenu = ({ linkName, linkStyle, menuItems }) => {
   const [open, setOpen] = useState(false);
   const anchorRef = useRef(null);
 
@@ -41,7 +42,7 @@ export const LinkMenu = ({ linkName, link, menuItems }) => {
   }, [open]);
   return (
     <>
-      <Button ref={anchorRef} onClick={handleToggle} className={link}>
+      <Button ref={anchorRef} onClick={handleToggle} className={linkStyle}>
         {linkName}
       </Button>
       <Popper
@@ -67,9 +68,11 @@ export const LinkMenu = ({ linkName, link, menuItems }) => {
                   onKeyDown={handleListKeyDown}
                 >
                   {menuItems.map((item) => (
-                    <MenuItem key={linkName + item} onClick={handleClose}>
-                      {item}
-                    </MenuItem>
+                    <Link to={item.link}>
+                      <MenuItem key={linkName + item} onClick={handleClose}>
+                        {item.title}
+                      </MenuItem>
+                    </Link>
                   ))}
                 </MenuList>
               </ClickAwayListener>
