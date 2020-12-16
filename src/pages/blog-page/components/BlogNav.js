@@ -7,7 +7,7 @@ import {
 } from "@material-ui/core";
 import { Link } from "react-router-dom";
 
-import { LinkMenu } from "./LinkMenu";
+import { LinkMenu } from "./blog-nav-components/LinkMenu";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -58,22 +58,22 @@ export const BlogNav = () => {
           <LinkMenu
             linkName="React"
             link={link}
-            menuItems={["Basics", "React Hooks", "JSX", "Basics"]}
+            menuItems={["Nothing here yet"]}
           />
           <LinkMenu
             linkName="JavaScript"
             link={link}
-            menuItems={["Basics", "const vs let", "Arrays", "Functions"]}
+            menuItems={["Nothing here yet"]}
           />
           <LinkMenu
             linkName="HTML"
             link={link}
-            menuItems={["Basics", "Head", "Semantics", "Input"]}
+            menuItems={["Nothing here yet"]}
           />
           <LinkMenu
             linkName="CSS"
             link={link}
-            menuItems={["Basics", "FlexBox", "FlexGrid"]}
+            menuItems={["Nothing here yet"]}
           />
           <Button>
             <Link to="/" className={link}>
