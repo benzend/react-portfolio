@@ -560,7 +560,7 @@ export const BlogReactIntro = () => {
         <Button>React Structure</Button>
         <Button>ES6</Button>
         <Button>JSX</Button>
-        <Button>Components and How to Manage Them</Button>
+        <Button>Components</Button>
       </Box>
     </Box>
   );

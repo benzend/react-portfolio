@@ -23,6 +23,7 @@ a {
   background-color: rgb(31, 31, 31);
   padding: 1rem;
   border-radius: 10px;
+  overflow-y: auto;
 }
 .code-block--white {
   color: white;
