@@ -55,10 +55,26 @@ export const BlogNav = () => {
               Home
             </Link>
           </Button>
-          <LinkMenu linkName="React" link={link} />
-          <LinkMenu linkName="JavaScript" link={link} />
-          <LinkMenu linkName="HTML" link={link} />
-          <LinkMenu linkName="CSS" link={link} />
+          <LinkMenu
+            linkName="React"
+            link={link}
+            menuItems={["React Hooks", "JSX", "Basics"]}
+          />
+          <LinkMenu
+            linkName="JavaScript"
+            link={link}
+            menuItems={["React Hooks", "JSX", "Basics"]}
+          />
+          <LinkMenu
+            linkName="HTML"
+            link={link}
+            menuItems={["React Hooks", "JSX", "Basics"]}
+          />
+          <LinkMenu
+            linkName="CSS"
+            link={link}
+            menuItems={["React Hooks", "JSX", "Basics"]}
+          />
           <Button>
             <Link to="/" className={link}>
               Portfolio

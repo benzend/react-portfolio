@@ -9,7 +9,7 @@ import {
 } from "@material-ui/core";
 import { useEffect, useRef, useState } from "react";
 
-export const LinkMenu = ({ linkName, link }) => {
+export const LinkMenu = ({ linkName, link, menuItems }) => {
   const [open, setOpen] = useState(false);
   const anchorRef = useRef(null);
 
@@ -66,9 +66,9 @@ export const LinkMenu = ({ linkName, link }) => {
                   id="menu-list-grow"
                   onKeyDown={handleListKeyDown}
                 >
-                  <MenuItem onClick={handleClose}>Profile</MenuItem>
-                  <MenuItem onClick={handleClose}>Profile</MenuItem>
-                  <MenuItem onClick={handleClose}>Profile</MenuItem>
+                  {menuItems.map((item) => (
+                    <MenuItem onClick={handleClose}>{item}</MenuItem>
+                  ))}
                 </MenuList>
               </ClickAwayListener>
             </Paper>
