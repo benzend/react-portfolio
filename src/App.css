@@ -14,6 +14,16 @@
   text-align: center;
 }
 
+.centerize {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.padding--1rem {
+  padding: 1rem;
+}
+
 a {
   text-decoration: none;
 }

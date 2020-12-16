@@ -55,6 +55,9 @@ const useStyles = makeStyles((theme) => ({
       left: "-50px",
     },
   },
+  leftRight: {
+    display: "flex",
+  },
 }));
 
 export const BlogReactIntro = () => {
@@ -66,6 +69,7 @@ export const BlogReactIntro = () => {
     contentBox,
     contentContainer,
     menuIconContainer,
+    leftRight,
   } = useStyles();
   return (
     <Box className={root}>
@@ -546,10 +550,17 @@ export const BlogReactIntro = () => {
             Since React is a component based library, it is standard to separate
             areas of concern into "components".
           </Typography>
-          <img
-            src="../../images/react-component-ex.png"
-            alt="react component files and react folder setup"
-          />
+          <Box className="centerize">
+            <img
+              src="../../images/react-component-ex.png"
+              alt="react component files and react folder setup"
+            />
+          </Box>
+          <Typography align="center" color="textPrimary" variant="body1">
+            As you can see from about, this is how a very basic React layout
+            should look, especially when starting off with{" "}
+            <code>`npx create-react-app`</code>.
+          </Typography>
         </Container>
       </Box>
       <Box className={menuOpen ? "open " + nav : nav}>
