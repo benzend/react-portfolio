@@ -1,5 +1,13 @@
-import { Box, makeStyles, Container, Typography } from "@material-ui/core";
+import {
+  Box,
+  makeStyles,
+  Container,
+  Typography,
+  Button,
+} from "@material-ui/core";
 import { Link } from "react-router-dom";
+
+import { LinkMenu } from "./LinkMenu";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -42,16 +50,20 @@ export const BlogNav = () => {
           </Typography>
         </Box>
         <Box className={links}>
-          <Link to="#" className={link}>
-            Home
-          </Link>
-          <div className={link}>React</div>
-          <div className={link}>JavaScript</div>
-          <div className={link}>HTML</div>
-          <div className={link}>CSS</div>
-          <Link to="/" className={link}>
-            Portfolio
-          </Link>
+          <Button>
+            <Link to="#" className={link}>
+              Home
+            </Link>
+          </Button>
+          <LinkMenu linkName="React" link={link} />
+          <LinkMenu linkName="JavaScript" link={link} />
+          <LinkMenu linkName="HTML" link={link} />
+          <LinkMenu linkName="CSS" link={link} />
+          <Button>
+            <Link to="/" className={link}>
+              Portfolio
+            </Link>
+          </Button>
         </Box>
       </Container>
     </Box>
