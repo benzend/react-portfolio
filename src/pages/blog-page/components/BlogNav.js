@@ -1,10 +1,13 @@
+import { useState } from "react";
 import {
   Box,
   makeStyles,
   Container,
   Typography,
   Button,
+  IconButton,
 } from "@material-ui/core";
+import { ArrowDownward } from "@material-ui/icons";
 import { Link } from "react-router-dom";
 
 import { LinkMenu } from "./blog-nav-components/LinkMenu";
@@ -21,6 +24,25 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     zIndex: 20,
     background: "#653FFFdd",
+    [theme.breakpoints.down("sm")]: {
+      overFlow: "hidden",
+      "&.open": {
+        height: "300px",
+      },
+    },
+  },
+  arrowDownwardContainer: {
+    display: "none",
+    [theme.breakpoints.down("sm")]: {
+      display: "block",
+      position: "fixed",
+      right: "10px",
+      top: "7px",
+      color: "white",
+      "&.active": {
+        transform: "translateY(200px) rotate(180deg)",
+      },
+    },
   },
   container: {
     display: "flex",
@@ -32,6 +54,13 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-around",
     alignItems: "center",
     width: "50%",
+    [theme.breakpoints.down("sm")]: {
+      flexDirection: "column",
+      display: "none",
+      "&.active": {
+        display: "flex",
+      },
+    },
   },
   link: {
     color: "white",
@@ -43,17 +72,33 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export const BlogNav = () => {
-  const { root, container, links, link, title } = useStyles();
+  const [open, setOpen] = useState(false);
+  const {
+    root,
+    container,
+    links,
+    link,
+    title,
+    arrowDownwardContainer,
+  } = useStyles();
 
   return (
-    <Box className={root} component="nav">
+    <Box className={open ? root + " open" : root} component="nav">
+      <IconButton
+        onClick={() => setOpen(!open)}
+        className={
+          open ? arrowDownwardContainer + " active" : arrowDownwardContainer
+        }
+      >
+        <ArrowDownward />
+      </IconButton>
       <Container className={container}>
         <Box>
           <Typography className={title} variant="h5">
             MadeUnlinked
           </Typography>
         </Box>
-        <Box className={links}>
+        <Box className={open ? links + " active" : links}>
           <Button>
             <Link to="/blog" className={link}>
               Home
