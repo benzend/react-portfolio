@@ -63,17 +63,17 @@ export const BlogNav = () => {
           <LinkMenu
             linkName="JavaScript"
             link={link}
-            menuItems={["React Hooks", "JSX", "Basics"]}
+            menuItems={["const vs let", "Arrays", "Functions"]}
           />
           <LinkMenu
             linkName="HTML"
             link={link}
-            menuItems={["React Hooks", "JSX", "Basics"]}
+            menuItems={["Head", "Semantic Elements", "Input"]}
           />
           <LinkMenu
             linkName="CSS"
             link={link}
-            menuItems={["React Hooks", "JSX", "Basics"]}
+            menuItems={["Basics", "FlexBox", "FlexGrid"]}
           />
           <Button>
             <Link to="/" className={link}>
