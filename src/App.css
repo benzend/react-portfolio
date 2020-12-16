@@ -18,14 +18,39 @@ a {
   text-decoration: none;
 }
 
-#myVideo {
-  position: fixed;
-  left: 0;
-  top: 0;
-  height: 100vh;
-  z-index: -20;
+/* Code utils */
+.code-block {
+  background-color: rgb(31, 31, 31);
+  padding: 1rem;
+  border-radius: 10px;
 }
-
+.code-block--white {
+  color: white;
+}
+.code-block--gray {
+  color: gray;
+}
+.code-block--pink {
+  color: rgb(216, 105, 123);
+}
+.code-block--blue {
+  color: rgb(37, 175, 221);
+}
+.code-block--lightBlue {
+  color: rgb(95, 206, 243);
+}
+.code-block--yellow {
+  color: rgb(241, 241, 42);
+}
+.code-block--string {
+  color: rgb(255, 66, 66);
+}
+.code-block--green {
+  color: rgb(0, 151, 8);
+}
+.code-block--lightGreen {
+  color: rgb(37, 231, 46);
+}
 @media screen and (min-width: 1200px) {
   #myVideo {
     height: 130vh;

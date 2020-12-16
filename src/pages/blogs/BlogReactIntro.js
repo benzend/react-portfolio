@@ -4,6 +4,8 @@ import {
   Typography,
   makeStyles,
   Button,
+  List,
+  ListItem,
 } from "@material-ui/core";
 
 const useStyles = makeStyles(() => ({
@@ -61,6 +63,95 @@ export const BlogReactIntro = () => {
             component based library, you create a JavaScript file for each
             component, making organization cleaner and easier to navigate.
           </Typography>
+          <Typography
+            align="center"
+            color="textPrimary"
+            variant="h4"
+            component="h2"
+          >
+            React Structure
+          </Typography>
+          <Typography align="center" color="textPrimary" variant="body1">
+            A very very simple example of what React looks like:
+          </Typography>
+          <pre className="code-block">
+            <code>
+              <span className="code-block--pink">import </span>
+              <span className="code-block--lightBlue">React </span>
+              {/* <span className="code-block--white">, {"{"}</span>
+              <span className="code-block--yellow"> useState </span>
+              <span className="code-block--white">{"}"} </span> */}
+              <span className="code-block--pink">from </span>
+              <span className="code-block--string">'react'</span>
+              <span className="code-block--white">;</span>
+            </code>
+            <br />
+            <br />
+            <code>
+              <span className="code-block--pink">export </span>
+              <span className="code-block--blue">const </span>
+              <span className="code-block--yellow">MyComponent </span>
+              <span className="code-block--white">= </span>
+              <span className="code-block--white">() </span>
+              <span className="code-block--blue">{"=> "} </span>
+              <span className="code-block--white">{"{"}</span>
+            </code>
+            {/* <br />
+            <code>
+              {"  "}
+              <span className="code-block--blue">const </span>
+              <span className="code-block--white">[</span>
+              <span className="code-block--lightBlue">opened</span>
+              <span className="code-block--white">, </span>
+              <span className="code-block--yellow">isOpened</span>
+              <span className="code-block--white">] </span>
+              <span className="code-block--blue">= </span>
+              <span className="code-block--yellow">useState</span>
+              <span className="code-block--white">(</span>
+              <span className="code-block--blue">false</span>
+              <span className="code-block--white">);</span>
+            </code> */}
+            <br />
+            <code>
+              {"  "}
+              <span className="code-block--pink">return </span>
+              <span className="code-block--white">(</span>
+            </code>
+            <br />
+            <code>
+              {"    "}
+              <span className="code-block--gray">{"<"}</span>
+              <span className="code-block--blue">div</span>
+              <span className="code-block--gray">{">"} </span>
+            </code>
+            <br />
+            <code>
+              {"        "}
+              <span className="code-block--gray">{"<"}</span>
+              <span className="code-block--blue">h1</span>
+              <span className="code-block--gray">{">"}</span>
+              <span className="code-block--white">Hello World!</span>
+              <span className="code-block--gray">{"<"}</span>
+              <span className="code-block--blue">/h1</span>
+              <span className="code-block--gray">{">"}</span>
+            </code>
+            <br />
+            <code>
+              {"    "}
+              <span className="code-block--gray">{"<"}</span>
+              <span className="code-block--blue">/div</span>
+              <span className="code-block--gray">{">"} </span>
+            </code>
+            <br />
+            <code>
+              {"  "}
+              <span className="code-block--white">);</span>
+            </code>
+            <br />
+            <code>
+              <span className="code-block--white">};</span>
+            </code>
+          </pre>
         </Container>
       </Box>
       <Box className={nav}>
