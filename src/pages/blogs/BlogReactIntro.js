@@ -546,6 +546,10 @@ export const BlogReactIntro = () => {
             Since React is a component based library, it is standard to separate
             areas of concern into "components".
           </Typography>
+          <img
+            src="../../images/react-component-ex.png"
+            alt="react component files and react folder setup"
+          />
         </Container>
       </Box>
       <Box className={menuOpen ? "open " + nav : nav}>
