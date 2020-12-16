@@ -2,7 +2,7 @@ import { Typography, makeStyles, Box, Container } from "@material-ui/core";
 
 import { BlogNav } from "./blog-page/components/BlogNav";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   root: {},
   title: {},
   header: {
