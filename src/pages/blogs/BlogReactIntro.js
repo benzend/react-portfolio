@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   Box,
   Container,
@@ -29,6 +30,9 @@ const useStyles = makeStyles((theme) => ({
     background: "#f7f7f7",
     [theme.breakpoints.down("md")]: {
       transform: "translateX(100%)",
+      "&.open": {
+        transform: "translateX(0)",
+      },
     },
   },
   contentBox: {
@@ -42,14 +46,15 @@ const useStyles = makeStyles((theme) => ({
     display: "none",
     [theme.breakpoints.down("md")]: {
       display: "box",
-      position: "fixed",
-      top: "80px",
-      right: "10px",
+      position: "absolute",
+      top: "0",
+      left: "-50px",
     },
   },
 }));
 
 export const BlogReactIntro = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
   const {
     headerStyle,
     root,
@@ -60,9 +65,6 @@ export const BlogReactIntro = () => {
   } = useStyles();
   return (
     <Box className={root}>
-      <IconButton className={menuIconContainer}>
-        <Menu />
-      </IconButton>
       <Box className={contentBox}>
         <Box className={headerStyle} component="header">
           <Typography
@@ -542,7 +544,13 @@ export const BlogReactIntro = () => {
           </Typography>
         </Container>
       </Box>
-      <Box className={nav}>
+      <Box className={menuOpen ? "open " + nav : nav}>
+        <IconButton
+          onClick={() => setMenuOpen(!menuOpen)}
+          className={menuIconContainer}
+        >
+          <Menu />
+        </IconButton>
         <Button>An Introduction to React</Button>
         <Button>What is React?</Button>
         <Button>React Structure</Button>
