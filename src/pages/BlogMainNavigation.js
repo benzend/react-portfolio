@@ -28,10 +28,8 @@ export const BlogMainNavigation = () => {
         </Typography>
       </Box>
       <Container maxWidth="sm" component="main">
-        <Typography color="textPrimary" variant="body1">
-          There isn't anything here yet but that doesn't mean there I'm not
-          currently working on making some tutorials for those who want the
-          extra material.
+        <Typography align="center" color="textPrimary" variant="body1">
+          There isn't anything here yet.
         </Typography>
       </Container>
     </Box>

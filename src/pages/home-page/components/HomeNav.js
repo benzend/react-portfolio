@@ -1,6 +1,7 @@
-import { Box, IconButton, makeStyles } from "@material-ui/core";
 import { useState, useEffect } from "react";
+import { Box, IconButton, makeStyles } from "@material-ui/core";
 import { MenuOpen } from "@material-ui/icons";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -84,19 +85,25 @@ export const HomeNav = () => {
     }, 1000);
   }, []);
 
-  if (animated[0] && !animated[1] && !animated[2]) {
+  if (animated[0] && !animated[1] && !animated[2] && !animated[3]) {
     const anim = [...animated];
     anim[1] = true;
     setTimeout(() => {
       setAnimated(anim);
     }, 800);
-  } else if (animated[0] && animated[1] && !animated[2]) {
+  } else if (animated[0] && animated[1] && !animated[2] && !animated[3]) {
     const anim = [...animated];
     anim[2] = true;
     setTimeout(() => {
       setAnimated(anim);
     }, 800);
-  } else if (animated[0] && animated[1] && animated[2]) {
+  } else if (animated[0] && animated[1] && animated[2] && !animated[3]) {
+    const anim = [...animated];
+    anim[3] = true;
+    setTimeout(() => {
+      setAnimated(anim);
+    }, 800);
+  } else if (animated[0] && animated[1] && animated[2] && animated[3]) {
     // do nothing
   }
 
@@ -115,6 +122,9 @@ export const HomeNav = () => {
         <a className={animated[2] ? links + " active" : links} href="#contact">
           Get In Touch
         </a>
+        <Link className={animated[3] ? links + " active" : links} to="/blog">
+          Blog
+        </Link>
       </Box>
     </>
   );

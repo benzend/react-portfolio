@@ -32,6 +32,7 @@ const useStyles = makeStyles((theme) => ({
   },
   link: {
     color: "white",
+    minWidth: "auto",
   },
   title: {
     color: "white",
@@ -75,7 +76,7 @@ export const BlogNav = () => {
             link={link}
             menuItems={["Nothing here yet"]}
           />
-          <Button>
+          <Button className={link}>
             <Link to="/" className={link}>
               Portfolio
             </Link>
