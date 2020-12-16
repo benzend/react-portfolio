@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     minWidth: "30%",
     position: "fixed",
     marginTop: "60px",
-    padding: "1rem 0",
+    padding: "1rem 1rem",
     height: "100vh",
     right: 0,
     top: 0,
@@ -30,6 +30,8 @@ const useStyles = makeStyles((theme) => ({
     background: "#f7f7f7",
     [theme.breakpoints.down("md")]: {
       transform: "translateX(100%)",
+      transition: "transform 1s ease",
+      minWidth: "fit-content",
       "&.open": {
         transform: "translateX(0)",
       },
@@ -47,7 +49,8 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("md")]: {
       display: "box",
       position: "absolute",
-      top: "0",
+      backgroundColor: "#f4f4f4",
+      top: "3px",
       left: "-50px",
     },
   },
