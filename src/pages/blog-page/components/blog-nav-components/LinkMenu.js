@@ -67,7 +67,9 @@ export const LinkMenu = ({ linkName, link, menuItems }) => {
                   onKeyDown={handleListKeyDown}
                 >
                   {menuItems.map((item) => (
-                    <MenuItem onClick={handleClose}>{item}</MenuItem>
+                    <MenuItem key={linkName + item} onClick={handleClose}>
+                      {item}
+                    </MenuItem>
                   ))}
                 </MenuList>
               </ClickAwayListener>
