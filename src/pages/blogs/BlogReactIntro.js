@@ -4,11 +4,9 @@ import {
   Typography,
   makeStyles,
   Button,
-  List,
-  ListItem,
 } from "@material-ui/core";
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
   },
@@ -27,9 +25,15 @@ const useStyles = makeStyles(() => ({
     flexDirection: "column",
     justifyContent: "flex-start",
     background: "#f7f7f7",
+    [theme.breakpoints.down("md")]: {
+      transform: "translateX(100%)",
+    },
   },
   contentBox: {
     width: "70%",
+    [theme.breakpoints.down("md")]: {
+      width: "100%",
+    },
   },
   contentContainer: {},
 }));
@@ -136,15 +140,15 @@ export const BlogReactIntro = () => {
               <span className="code-block--blue">h1</span>
               <span className="code-block--gray">{">"}</span>
               <span className="code-block--white">Hello World!</span>
-              <span className="code-block--gray">{"<"}</span>
-              <span className="code-block--blue">/h1</span>
+              <span className="code-block--gray">{"</"}</span>
+              <span className="code-block--blue">h1</span>
               <span className="code-block--gray">{">"}</span>
             </code>
             <br />
             <code>
               {"    "}
-              <span className="code-block--gray">{"<"}</span>
-              <span className="code-block--blue">/div</span>
+              <span className="code-block--gray">{"</"}</span>
+              <span className="code-block--blue">div</span>
               <span className="code-block--gray">{">"} </span>
             </code>
             <br />
@@ -216,15 +220,15 @@ export const BlogReactIntro = () => {
               <span className="code-block--blue">h1</span>
               <span className="code-block--gray">{">"}</span>
               <span className="code-block--white">Hello World!</span>
-              <span className="code-block--gray">{"<"}</span>
-              <span className="code-block--blue">/h1</span>
+              <span className="code-block--gray">{"</"}</span>
+              <span className="code-block--blue">h1</span>
               <span className="code-block--gray">{">"}</span>
             </code>
             <br />
             <code>
               {"    "}
-              <span className="code-block--gray">{"<"}</span>
-              <span className="code-block--blue">/div</span>
+              <span className="code-block--gray">{"</"}</span>
+              <span className="code-block--blue">div</span>
               <span className="code-block--gray">{">"} </span>
             </code>
             <br />
@@ -247,8 +251,8 @@ export const BlogReactIntro = () => {
               <span className="code-block--string">"title"</span>
               <span className="code-block--gray">{">"}</span>
               <span className="code-block--white">Hello World!</span>
-              <span className="code-block--gray">{"<"}</span>
-              <span className="code-block--blue">/h1</span>
+              <span className="code-block--gray">{"</"}</span>
+              <span className="code-block--blue">h1</span>
               <span className="code-block--gray">{">"}</span>
             </code>
           </pre>
@@ -266,13 +270,254 @@ export const BlogReactIntro = () => {
               <span className="code-block--string">"title"</span>
               <span className="code-block--gray">{">"}</span>
               <span className="code-block--white">Hello World!</span>
-              <span className="code-block--gray">{"<"}</span>
-              <span className="code-block--blue">/h1</span>
+              <span className="code-block--gray">{"</"}</span>
+              <span className="code-block--blue">h1</span>
               <span className="code-block--gray">{">"}</span>
             </code>
           </pre>
           <Typography align="center" color="textPrimary" variant="body1">
-            className
+            Just change it to `className` and it's as easy as that. Most of them
+            are the same as the HTML but there are a few exceptions which you
+            will find out later on.
+          </Typography>
+          <Typography align="center" color="textPrimary" variant="body1">
+            One other thing about JSX in React is that it MUST be wrapped in a
+            single element. Something like wrapping a div around the entire
+            collection of JSX as you CANNOT do:
+          </Typography>
+          <pre className="code-block">
+            <code>
+              {"  "}
+              <span className="code-block--pink">return </span>
+              <span className="code-block--white">(</span>
+            </code>
+            <br />
+            <code>
+              {"    "}
+              <span className="code-block--gray">{"<"}</span>
+              <span className="code-block--blue">div</span>
+              <span className="code-block--gray">{">"} </span>
+            </code>
+            <br />
+            <code>
+              {"        "}
+              <span className="code-block--gray">{"<"}</span>
+              <span className="code-block--blue">h1</span>
+              <span className="code-block--gray">{">"}</span>
+              <span className="code-block--white">Hello World!</span>
+              <span className="code-block--gray">{"</"}</span>
+              <span className="code-block--blue">h1</span>
+              <span className="code-block--gray">{">"}</span>
+            </code>
+            <br />
+            <code>
+              {"    "}
+              <span className="code-block--gray">{"</"}</span>
+              <span className="code-block--blue">div</span>
+              <span className="code-block--gray">{">"} </span>
+            </code>
+            <br />
+            <code>
+              {"    "}
+              <span className="code-block--gray">{"<"}</span>
+              <span className="code-block--blue">div</span>
+              <span className="code-block--gray">{">"} </span>
+            </code>
+            <br />
+            <code>
+              {"        "}
+              <span className="code-block--gray">{"<"}</span>
+              <span className="code-block--blue">h1</span>
+              <span className="code-block--gray">{">"}</span>
+              <span className="code-block--white">Goodbye World!</span>
+              <span className="code-block--gray">{"</"}</span>
+              <span className="code-block--blue">h1</span>
+              <span className="code-block--gray">{">"}</span>
+            </code>
+            <br />
+            <code>
+              {"    "}
+              <span className="code-block--gray">{"</"}</span>
+              <span className="code-block--blue">div</span>
+              <span className="code-block--gray">{">"} </span>
+            </code>
+            <br />
+            <code>
+              {"  "}
+              <span className="code-block--white">)</span>
+            </code>
+          </pre>
+          <Typography align="center" color="textPrimary" variant="body1">
+            You absolutely have to wrap all of it with some kind of container
+            like this:
+          </Typography>
+          <pre className="code-block">
+            <code>
+              {"  "}
+              <span className="code-block--pink">return </span>
+              <span className="code-block--white">(</span>
+            </code>
+            <br />
+            <code>
+              {"    "}
+              <span className="code-block--gray">{"<"}</span>
+              <span className="code-block--blue">div</span>
+              <span className="code-block--gray">{">"} </span>
+            </code>
+            <br />
+            <code>
+              {"        "}
+              <span className="code-block--gray">{"<"}</span>
+              <span className="code-block--blue">div</span>
+              <span className="code-block--gray">{">"} </span>
+            </code>
+            <br />
+            <code>
+              {"            "}
+              <span className="code-block--gray">{"<"}</span>
+              <span className="code-block--blue">h1</span>
+              <span className="code-block--gray">{">"}</span>
+              <span className="code-block--white">Hello World!</span>
+              <span className="code-block--gray">{"</"}</span>
+              <span className="code-block--blue">h1</span>
+              <span className="code-block--gray">{">"}</span>
+            </code>
+            <br />
+            <code>
+              {"        "}
+              <span className="code-block--gray">{"</"}</span>
+              <span className="code-block--blue">div</span>
+              <span className="code-block--gray">{">"} </span>
+            </code>
+            <br />
+            <code>
+              {"        "}
+              <span className="code-block--gray">{"<"}</span>
+              <span className="code-block--blue">div</span>
+              <span className="code-block--gray">{">"} </span>
+            </code>
+            <br />
+            <code>
+              {"            "}
+              <span className="code-block--gray">{"<"}</span>
+              <span className="code-block--blue">h1</span>
+              <span className="code-block--gray">{">"}</span>
+              <span className="code-block--white">Goodbye World!</span>
+              <span className="code-block--gray">{"</"}</span>
+              <span className="code-block--blue">h1</span>
+              <span className="code-block--gray">{">"}</span>
+            </code>
+            <br />
+            <code>
+              {"        "}
+              <span className="code-block--gray">{"</"}</span>
+              <span className="code-block--blue">div</span>
+              <span className="code-block--gray">{">"} </span>
+            </code>
+            <br />
+            <code>
+              {"    "}
+              <span className="code-block--gray">{"</"}</span>
+              <span className="code-block--blue">div</span>
+              <span className="code-block--gray">{">"} </span>
+            </code>
+            <br />
+            <code>
+              {"  "}
+              <span className="code-block--white">)</span>
+            </code>
+          </pre>
+          <Typography align="center" color="textPrimary" variant="body1">
+            React comes with a "fragment element" that wraps the JSX without the
+            need of an HTML element:
+          </Typography>
+          <pre className="code-block">
+            <code>
+              {"  "}
+              <span className="code-block--pink">return </span>
+              <span className="code-block--white">(</span>
+            </code>
+            <br />
+            <code>
+              {"    "}
+              <span className="code-block--gray">{"<>"}</span>
+            </code>
+            <br />
+            <code>
+              {"        "}
+              <span className="code-block--gray">{"<"}</span>
+              <span className="code-block--blue">div</span>
+              <span className="code-block--gray">{">"} </span>
+            </code>
+            <br />
+            <code>
+              {"            "}
+              <span className="code-block--gray">{"<"}</span>
+              <span className="code-block--blue">h1</span>
+              <span className="code-block--gray">{">"}</span>
+              <span className="code-block--white">Hello World!</span>
+              <span className="code-block--gray">{"</"}</span>
+              <span className="code-block--blue">h1</span>
+              <span className="code-block--gray">{">"}</span>
+            </code>
+            <br />
+            <code>
+              {"        "}
+              <span className="code-block--gray">{"</"}</span>
+              <span className="code-block--blue">div</span>
+              <span className="code-block--gray">{">"} </span>
+            </code>
+            <br />
+            <code>
+              {"        "}
+              <span className="code-block--gray">{"<"}</span>
+              <span className="code-block--blue">div</span>
+              <span className="code-block--gray">{">"} </span>
+            </code>
+            <br />
+            <code>
+              {"            "}
+              <span className="code-block--gray">{"<"}</span>
+              <span className="code-block--blue">h1</span>
+              <span className="code-block--gray">{">"}</span>
+              <span className="code-block--white">Goodbye World!</span>
+              <span className="code-block--gray">{"</"}</span>
+              <span className="code-block--blue">h1</span>
+              <span className="code-block--gray">{">"}</span>
+            </code>
+            <br />
+            <code>
+              {"        "}
+              <span className="code-block--gray">{"</"}</span>
+              <span className="code-block--blue">div</span>
+              <span className="code-block--gray">{">"} </span>
+            </code>
+            <br />
+            <code>
+              {"    "}
+              <span className="code-block--gray">{"</>"}</span>
+            </code>
+            <br />
+            <code>
+              {"  "}
+              <span className="code-block--white">)</span>
+            </code>
+          </pre>
+          <Typography align="center" color="textPrimary" variant="body1">
+            In order to show you some other JSX abilities, you need to be
+            introduced to <em>Components</em>.
+          </Typography>
+          <Typography
+            align="center"
+            color="textPrimary"
+            variant="h4"
+            component="h2"
+          >
+            Components and How to Manage Them
+          </Typography>
+          <Typography align="center" color="textPrimary" variant="body1">
+            Since React is a component based library, it is standard to separate
+            areas of concern into "components".
           </Typography>
         </Container>
       </Box>
@@ -282,6 +527,7 @@ export const BlogReactIntro = () => {
         <Button>React Structure</Button>
         <Button>ES6</Button>
         <Button>JSX</Button>
+        <Button>Components and How to Manage Them</Button>
       </Box>
     </Box>
   );
