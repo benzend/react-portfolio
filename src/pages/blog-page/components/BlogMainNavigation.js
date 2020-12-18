@@ -1,4 +1,5 @@
 import { Typography, makeStyles, Box, Container } from "@material-ui/core";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles(() => ({
   root: {},
@@ -26,7 +27,7 @@ export const BlogMainNavigation = () => {
       </Box>
       <Container maxWidth="sm" component="main">
         <Typography align="center" color="textPrimary" variant="body1">
-          There isn't anything here yet.
+          <Link to="/blog/react/intro">An Introduction to React</Link>
         </Typography>
       </Container>
     </>
