@@ -55,9 +55,6 @@ const useStyles = makeStyles((theme) => ({
       left: "-50px",
     },
   },
-  leftRight: {
-    display: "flex",
-  },
 }));
 
 export const BlogReactIntro = () => {
@@ -69,7 +66,6 @@ export const BlogReactIntro = () => {
     contentBox,
     contentContainer,
     menuIconContainer,
-    leftRight,
   } = useStyles();
   return (
     <Box className={root}>
@@ -80,6 +76,7 @@ export const BlogReactIntro = () => {
             align="center"
             variant="h3"
             component="h1"
+            id="an-introduction-to-react"
           >
             An Introduction to React
           </Typography>
@@ -90,10 +87,17 @@ export const BlogReactIntro = () => {
             color="textPrimary"
             variant="h4"
             component="h2"
+            className="blog__h2"
+            id="what-is-react"
           >
             What is React?
           </Typography>
-          <Typography align="center" color="textPrimary" variant="body1">
+          <Typography
+            className="padding--tb--1rem"
+            align="center"
+            color="textPrimary"
+            variant="body1"
+          >
             React is a JavaScript library unlike Angular and Vue. It is known
             for its state management system, rendering out only the things that
             need to be rendered at a specific point in time. It uses a single
@@ -108,10 +112,17 @@ export const BlogReactIntro = () => {
             color="textPrimary"
             variant="h4"
             component="h2"
+            className="blog__h2"
+            id="react-structure"
           >
             React Structure
           </Typography>
-          <Typography align="center" color="textPrimary" variant="body1">
+          <Typography
+            className="padding--tb--1rem"
+            align="center"
+            color="textPrimary"
+            variant="body1"
+          >
             A very very simple example of what React looks like:
           </Typography>
           <pre className="code-block">
@@ -136,21 +147,6 @@ export const BlogReactIntro = () => {
               <span className="code-block--blue">{"=> "} </span>
               <span className="code-block--white">{"{"}</span>
             </code>
-            {/* <br />
-            <code>
-              {"  "}
-              <span className="code-block--blue">const </span>
-              <span className="code-block--white">[</span>
-              <span className="code-block--lightBlue">opened</span>
-              <span className="code-block--white">, </span>
-              <span className="code-block--yellow">isOpened</span>
-              <span className="code-block--white">] </span>
-              <span className="code-block--blue">= </span>
-              <span className="code-block--yellow">useState</span>
-              <span className="code-block--white">(</span>
-              <span className="code-block--blue">false</span>
-              <span className="code-block--white">);</span>
-            </code> */}
             <br />
             <code>
               {"  "}
@@ -192,7 +188,12 @@ export const BlogReactIntro = () => {
               <span className="code-block--white">{"};"}</span>
             </code>
           </pre>
-          <Typography align="center" color="textPrimary" variant="body1">
+          <Typography
+            className="padding--tb--1rem"
+            align="center"
+            color="textPrimary"
+            variant="body1"
+          >
             As you can see from this, a React file tends to contain an import
             for 'React' in order to use it. However if you initially build an
             app with `<code>npx create-react-app</code>` then importing it isn't
@@ -203,10 +204,17 @@ export const BlogReactIntro = () => {
             color="textPrimary"
             variant="h4"
             component="h2"
+            className="blog__h2"
+            id="es6"
           >
             ES6
           </Typography>
-          <Typography align="center" color="textPrimary" variant="body1">
+          <Typography
+            className="padding--tb--1rem"
+            align="center"
+            color="textPrimary"
+            variant="body1"
+          >
             If you're unfamiliar with ES6 syntax which is commonly used in React
             then I would highly encourage you to brush up on your JavaScript as
             higher order functions like
@@ -221,10 +229,17 @@ export const BlogReactIntro = () => {
             color="textPrimary"
             variant="h4"
             component="h2"
+            className="blog__h2"
+            id="jsx"
           >
             JSX
           </Typography>
-          <Typography align="center" color="textPrimary" variant="body1">
+          <Typography
+            className="padding--tb--1rem"
+            align="center"
+            color="textPrimary"
+            variant="body1"
+          >
             What is JSX you ask? Well, it's HTML. No, wait, it just{" "}
             <em>looks</em> like HTML. Since React is a JavaScript library
             EVERYTHING in React is JavaScript. JSX is just a "syntactic sugar"
@@ -268,7 +283,12 @@ export const BlogReactIntro = () => {
               <span className="code-block--white">)</span>
             </code>
           </pre>
-          <Typography align="center" color="textPrimary" variant="body1">
+          <Typography
+            className="padding--tb--1rem"
+            align="center"
+            color="textPrimary"
+            variant="body1"
+          >
             One of the best ways to know that you're working with JSX and not
             HTML is how setting up classes work. In normal, plain old HTML you
             would use `class` right? Like this:
@@ -287,7 +307,12 @@ export const BlogReactIntro = () => {
               <span className="code-block--gray">{">"}</span>
             </code>
           </pre>
-          <Typography align="center" color="textPrimary" variant="body1">
+          <Typography
+            className="padding--tb--1rem"
+            align="center"
+            color="textPrimary"
+            variant="body1"
+          >
             But guess what? Since everything IS JavaScript, you can't just write
             `class` because `class` is already defined in JavaScript as a
             function for making JavaScript classes! So instead we have:
@@ -306,12 +331,22 @@ export const BlogReactIntro = () => {
               <span className="code-block--gray">{">"}</span>
             </code>
           </pre>
-          <Typography align="center" color="textPrimary" variant="body1">
+          <Typography
+            className="padding--tb--1rem"
+            align="center"
+            color="textPrimary"
+            variant="body1"
+          >
             Just change it to `className` and it's as easy as that. Most of them
             are the same as the HTML but there are a few exceptions which you
             will find out later on.
           </Typography>
-          <Typography align="center" color="textPrimary" variant="body1">
+          <Typography
+            className="padding--tb--1rem"
+            align="center"
+            color="textPrimary"
+            variant="body1"
+          >
             One other thing about JSX in React is that it MUST be wrapped in a
             single element. Something like wrapping a div around the entire
             collection of JSX as you CANNOT do:
@@ -378,7 +413,12 @@ export const BlogReactIntro = () => {
               <span className="code-block--white">)</span>
             </code>
           </pre>
-          <Typography align="center" color="textPrimary" variant="body1">
+          <Typography
+            className="padding--tb--1rem"
+            align="center"
+            color="textPrimary"
+            variant="body1"
+          >
             You absolutely have to wrap all of it with some kind of container
             like this:
           </Typography>
@@ -458,7 +498,12 @@ export const BlogReactIntro = () => {
               <span className="code-block--white">)</span>
             </code>
           </pre>
-          <Typography align="center" color="textPrimary" variant="body1">
+          <Typography
+            className="padding--tb--1rem"
+            align="center"
+            color="textPrimary"
+            variant="body1"
+          >
             React comes with a "fragment element" that wraps the JSX without the
             need of an HTML element:
           </Typography>
@@ -534,7 +579,12 @@ export const BlogReactIntro = () => {
               <span className="code-block--white">)</span>
             </code>
           </pre>
-          <Typography align="center" color="textPrimary" variant="body1">
+          <Typography
+            className="padding--tb--1rem"
+            align="center"
+            color="textPrimary"
+            variant="body1"
+          >
             In order to show you some other JSX abilities, you need to be
             introduced to <em>Components</em>.
           </Typography>
@@ -543,10 +593,17 @@ export const BlogReactIntro = () => {
             color="textPrimary"
             variant="h4"
             component="h2"
+            className="blog__h2"
+            id="components"
           >
             Components and How to Manage Them
           </Typography>
-          <Typography align="center" color="textPrimary" variant="body1">
+          <Typography
+            className="padding--tb--1rem"
+            align="center"
+            color="textPrimary"
+            variant="body1"
+          >
             Since React is a component based library, it is standard to separate
             areas of concern into "components".
           </Typography>
@@ -556,7 +613,12 @@ export const BlogReactIntro = () => {
               alt="react component files and react folder setup"
             />
           </Box>
-          <Typography align="center" color="textPrimary" variant="body1">
+          <Typography
+            className="padding--tb--1rem"
+            align="center"
+            color="textPrimary"
+            variant="body1"
+          >
             As you can see from about, this is how a very basic React layout
             should look, especially when starting off with{" "}
             <code>`npx create-react-app`</code>.
@@ -570,12 +632,14 @@ export const BlogReactIntro = () => {
         >
           <Menu />
         </IconButton>
-        <Button>An Introduction to React</Button>
-        <Button>What is React?</Button>
-        <Button>React Structure</Button>
-        <Button>ES6</Button>
-        <Button>JSX</Button>
-        <Button>Components</Button>
+        <Button href="#an-introduction-to-react">
+          An Introduction to React
+        </Button>
+        <Button href="#what-is-react">What is React?</Button>
+        <Button href="#react-structure">React Structure</Button>
+        <Button href="#es6">ES6</Button>
+        <Button href="#jsx">JSX</Button>
+        <Button href="#components">Components</Button>
       </Box>
     </Box>
   );

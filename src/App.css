@@ -24,6 +24,14 @@
   padding: 1rem;
 }
 
+.padding--tb--1rem {
+  padding: 1rem 0 1rem;
+}
+
+.blog__h2 {
+  padding-top: 4rem;
+}
+
 a {
   text-decoration: none;
 }
