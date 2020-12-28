@@ -148,6 +148,21 @@ export const HomeProjectsSection = ({ yoffset }) => {
         />
         <Project
           img={img}
+          imgSource="./images/thumbnails/react-calculator_thumb.png"
+          imgAlt="a calculator made with react and typescript"
+          imgContainer={imgContainer}
+          imgOverlay={imgOverlay}
+          imgTitleStyle={imgTitle}
+          imgTitle="React Calculator"
+          techStyle={techStyle}
+          tech=">>React<<"
+          projBtnsStyle={projBtns}
+          btnsContainer={btnsContainer}
+          gitHubUrl="https://github.com/benzend/react-typescript-calculator"
+          liveUrl="https://quirky-kalam-6dc848.netlify.app/"
+        />
+        <Project
+          img={img}
           imgSource="./images/thumbnails/todo-list-thumbnail.png"
           imgAlt="a todo list"
           imgContainer={imgContainer}
