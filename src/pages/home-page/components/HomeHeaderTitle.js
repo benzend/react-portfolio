@@ -12,7 +12,7 @@ function HomeHeaderTitle({ headerTxt, subtitle }) {
         component="h3"
         variant="h3"
       >
-        Front-End Web Developer
+        Front-End React Developer
       </Typography>
     </Box>
   );
