@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     position: "relative",
     backgroundColor: "#fffefe",
-    boxShadow: "0 20px 60px #0008",
+    boxShadow: "0 20px 60px #0003",
     borderRadius: "20px",
     marginTop: "7rem",
     transition: "transform .1s linear",
