@@ -4,6 +4,7 @@ import "./index.css";
 import { App } from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core";
+import "fontsource-roboto";
 
 const theme = createMuiTheme({
   palette: {

@@ -1,7 +1,7 @@
 import { Switch, Route } from "react-router-dom";
-import { BlogMainNavigation } from "./blog-page/components/BlogMainNavigation";
+import { BlogMainNavigation } from "./BlogMainNavigation";
 import { BlogReactIntro } from "./blogs/BlogReactIntro";
-import { BlogNav } from "./blog-page/components/BlogNav";
+import { BlogNav } from "./BlogNav";
 
 export const Blog = () => {
   return (

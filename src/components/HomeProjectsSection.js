@@ -178,6 +178,21 @@ export const HomeProjectsSection = ({ yoffset }) => {
         />
         <Project
           img={img}
+          imgSource="./images/thumbnails/tracker_thumbnail.png"
+          imgAlt="Timer based on Trello"
+          imgContainer={imgContainer}
+          imgOverlay={imgOverlay}
+          imgTitleStyle={imgTitle}
+          imgTitle="Organizational Timer"
+          techStyle={techStyle}
+          tech=">>Vue<<"
+          projBtnsStyle={projBtns}
+          btnsContainer={btnsContainer}
+          gitHubUrl="https://github.com/Zallyy/Tracker-App"
+          liveUrl="https://trackerstats.netlify.app/"
+        />
+        <Project
+          img={img}
           imgSource="./images/thumbnails/TicTacToe-example-thumbnail.png"
           imgAlt="tic-tac-toe project example"
           imgContainer={imgContainer}

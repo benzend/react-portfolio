@@ -10,7 +10,7 @@ import {
 import { ArrowDownward } from "@material-ui/icons";
 import { Link } from "react-router-dom";
 
-import { LinkMenu } from "./blog-nav-components/LinkMenu";
+import { LinkMenu } from "./blog-page/components/blog-nav-components/LinkMenu";
 
 const useStyles = makeStyles((theme) => ({
   root: {

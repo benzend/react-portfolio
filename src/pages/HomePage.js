@@ -1,4 +1,4 @@
-import { HomeHeader, HomeMain, HomeNav } from "./home-page/components";
+import { HomeHeader, HomeMain, HomeNav } from "../components";
 import { Footer } from "../components/Footer";
 
 // don't forget layout component
