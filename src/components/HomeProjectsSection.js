@@ -102,7 +102,7 @@ export const HomeProjectsSection = ({ yoffset }) => {
     <Box id="projects" className={root}>
       <Typography
         className={yoffset > 300 ? "active " + title : title}
-        variant="h3"
+        variant="h2"
         component="h3"
       >
         Projects

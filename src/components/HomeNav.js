@@ -114,18 +114,27 @@ export const HomeNav = () => {
         <MenuOpen className={actualHam} fontSize="inherit" />
       </IconButton>
       <Box className={navOpen ? "open " + root : root} component="nav">
-        <a className={animated[0] ? links + " active" : links} href="#projects">
+        <a
+          onClick={() => setNavOpen((prev) => !prev)}
+          className={animated[0] ? links + " active" : links}
+          href="#projects"
+        >
           Projects
         </a>
-        <a className={animated[1] ? links + " active" : links} href="#about">
+        <a
+          onClick={() => setNavOpen((prev) => !prev)}
+          className={animated[1] ? links + " active" : links}
+          href="#about"
+        >
           About
         </a>
-        <a className={animated[2] ? links + " active" : links} href="#contact">
+        <a
+          onClick={() => setNavOpen((prev) => !prev)}
+          className={animated[2] ? links + " active" : links}
+          href="#contact"
+        >
           Get In Touch
         </a>
-        {/* <Link className={animated[3] ? links + " active" : links} to="/blog">
-          Blog
-        </Link> */}
       </Box>
     </>
   );

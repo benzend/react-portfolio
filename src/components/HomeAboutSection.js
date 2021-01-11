@@ -1,4 +1,4 @@
-import { Box, Typography, makeStyles } from "@material-ui/core";
+import { Box, Typography, makeStyles, Card } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -6,7 +6,11 @@ const useStyles = makeStyles((theme) => ({
     margin: "8% 0",
     borderRadius: "10px",
   },
-  aboutSection: {},
+  card: {
+    width: "fit-content",
+    margin: "auto",
+    padding: "2rem",
+  },
   title: {
     transform: "translateY(-50px)",
     opacity: 0,
@@ -78,48 +82,49 @@ export const HomeAboutSection = ({ yoffset }) => {
             className={
               yoffset > 1050 ? "active " + classes.title : classes.title
             }
-            variant="h3"
+            variant="h2"
             component="h3"
           >
             About
           </Typography>
         </Box>
-        <Box
-          className={
-            yoffset > 1060
-              ? "active " + classes.textContainer
-              : classes.textContainer
-          }
-        >
-          <Typography color="textPrimary" variant="h6">
-            An Introduction to Who I Am
-          </Typography>
-          <Typography color="textSecondary" variant="body1">
-            As an extremely proficient and motivated self-taught developer, I
-            have learned vast amounts of information in a short time, becoming
-            exceptionally versed in, not only web development, but have gained
-            business rationality, networking skills, design sense, have
-            furthered my logical perpectives, since when I started from nothing
-            six months ago. I could barley navigate through folders in the
-            beginning, as tech is not very prevalent in Idaho.
-          </Typography>
-          <Typography color="textPrimary" variant="h6">
-            My Current Focus
-          </Typography>
-          <Typography color="textSecondary" variant="body1">
-            React is my current focus. I have been expanding my knowledge
-            surrounding everything about React for the last 2 months, testing
-            out Next.js, Gatsby.js, Material UI, Styled-Components,
-            React-Router-Dom, TypeScript, Redux, higher order functions,
-            classical React and its current version.
-          </Typography>
-          <Typography color="textSecondary" variant="body1">
-            What I'm doing with React is solving logical problems and
-            discovering coding techniques using it. My goal is to achieve a high
-            level of efficiency with it, becoming extraordinarily fluent in it,
-            to know it like the back of my hand.
-          </Typography>
-          {/* <Typography color="textPrimary" variant="h6">
+        <Card className={classes.card}>
+          <Box
+            className={
+              yoffset > 1060
+                ? "active " + classes.textContainer
+                : classes.textContainer
+            }
+          >
+            <Typography color="textPrimary" variant="h6">
+              An Introduction to Who I Am
+            </Typography>
+            <Typography color="textSecondary" variant="body1">
+              As an extremely proficient and motivated self-taught developer, I
+              have learned vast amounts of information in a short time, becoming
+              exceptionally versed in, not only web development, but have gained
+              business rationality, networking skills, design sense, have
+              furthered my logical perpectives, since when I started from
+              nothing six months ago. I could barley navigate through folders in
+              the beginning, as tech is not very prevalent in Idaho.
+            </Typography>
+            <Typography color="textPrimary" variant="h6">
+              My Current Focus
+            </Typography>
+            <Typography color="textSecondary" variant="body1">
+              React is my current focus. I have been expanding my knowledge
+              surrounding everything about React for the last 2 months, testing
+              out Next.js, Gatsby.js, Material UI, Styled-Components,
+              React-Router-Dom, TypeScript, Redux, higher order functions,
+              classical React and its current version.
+            </Typography>
+            <Typography color="textSecondary" variant="body1">
+              What I'm doing with React is solving logical problems and
+              discovering coding techniques using it. My goal is to achieve a
+              high level of efficiency with it, becoming extraordinarily fluent
+              in it, and knowing it like the back of my hand.
+            </Typography>
+            {/* <Typography color="textPrimary" variant="h6">
             A Breakdown of These Six Months
           </Typography>
           <Typography color="textSecondary" variant="body1">
@@ -194,7 +199,8 @@ export const HomeAboutSection = ({ yoffset }) => {
             projects, and I've also come to really like the TypeScript/React
             combo.
           </Typography> */}
-        </Box>
+          </Box>
+        </Card>
       </Box>
     </Box>
   );

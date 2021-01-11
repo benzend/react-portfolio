@@ -9,6 +9,7 @@ import {
   Typography,
   makeStyles,
   useMediaQuery,
+  Card,
 } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
@@ -52,8 +53,7 @@ const useStyles = makeStyles((theme) => ({
       opacity: 1,
     },
   },
-  form: {
-    padding: "10px 30px",
+  formContainer: {
     borderRadius: "15px",
     width: "100%",
     [theme.breakpoints.up("md")]: {
@@ -62,8 +62,8 @@ const useStyles = makeStyles((theme) => ({
       margin: "1%",
     },
     [theme.breakpoints.up("lg")]: {
-      margin: "2%",
-      padding: "0",
+      width: "50%",
+      height: "400px",
     },
   },
   imgContainer: {
@@ -89,7 +89,7 @@ export const HomeContactSection = ({ yoffset }) => {
       <Box textAlign="center">
         <Typography
           className={yoffset > 1500 ? "active " + classes.title : classes.title}
-          variant="h3"
+          variant="h2"
           component="h3"
         >
           Contact Me
@@ -110,61 +110,63 @@ export const HomeContactSection = ({ yoffset }) => {
             />
           </div>
         ) : null}
-        <form className={classes.form} name="contact" method="POST">
-          <input type="hidden" name="form-name" value="contact" />
+        <Card className={classes.formContainer}>
+          <form className={classes.form} name="contact" method="POST">
+            <input type="hidden" name="form-name" value="contact" />
 
-          <FormControl>
-            <InputLabel htmlFor="name">Name</InputLabel>
-            <Input
-              id="name"
-              name="name"
-              type="text"
-              aria-describedby="An input for your name"
-              required
-            />
-          </FormControl>
-          <br />
-          <FormControl>
-            <InputLabel htmlFor="email">Email</InputLabel>
-            <Input
-              id="email"
-              name="email"
-              type="email"
-              aria-describedby="An input for you email address"
-              required
-            />
-          </FormControl>
-          <br />
-          <FormControl>
-            <InputLabel htmlFor="tel">Phone Number</InputLabel>
-            <Input
-              id="tel"
-              name="tel"
-              type="tel"
-              aria-describedby="An input for your phone number"
-            />
-            <FormHelperText id="my-helper-text">
-              (Your phone number isn't required)
-            </FormHelperText>
-          </FormControl>
-          <br />
-          <FormControl>
-            <TextareaAutosize
-              className={classes.textArea}
-              placeholder="What would you like to say?"
-              id="message"
-              name="message"
-              rows="5"
-              cols="28"
-            ></TextareaAutosize>
-          </FormControl>
+            <FormControl>
+              <InputLabel htmlFor="name">Name</InputLabel>
+              <Input
+                id="name"
+                name="name"
+                type="text"
+                aria-describedby="An input for your name"
+                required
+              />
+            </FormControl>
+            <br />
+            <FormControl>
+              <InputLabel htmlFor="email">Email</InputLabel>
+              <Input
+                id="email"
+                name="email"
+                type="email"
+                aria-describedby="An input for you email address"
+                required
+              />
+            </FormControl>
+            <br />
+            <FormControl>
+              <InputLabel htmlFor="tel">Phone Number</InputLabel>
+              <Input
+                id="tel"
+                name="tel"
+                type="tel"
+                aria-describedby="An input for your phone number"
+              />
+              <FormHelperText id="my-helper-text">
+                (Your phone number isn't required)
+              </FormHelperText>
+            </FormControl>
+            <br />
+            <FormControl>
+              <TextareaAutosize
+                className={classes.textArea}
+                placeholder="What would you like to say?"
+                id="message"
+                name="message"
+                rows="5"
+                cols="28"
+              ></TextareaAutosize>
+            </FormControl>
 
-          <Box marginTop="20px">
-            <Button color="primary" type="submit">
-              Submit
-            </Button>
-          </Box>
-        </form>
+            <Box marginTop="20px">
+              <Button color="primary" type="submit">
+                Submit
+              </Button>
+            </Box>
+          </form>
+        </Card>
       </Box>
     </section>
   );
